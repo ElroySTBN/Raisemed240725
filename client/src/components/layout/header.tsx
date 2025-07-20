@@ -19,7 +19,19 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-primary">RaiseMed.IA</span>
+              <a 
+                href="/" 
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="flex items-center"
+              >
+                <img 
+                  src="/assets/raisemed-logo.png" 
+                  alt="RaiseMed.IA" 
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-8">
@@ -41,12 +53,12 @@ export default function Header() {
                 >
                   Cas Clients
                 </a>
-                <button 
-                  onClick={() => scrollToSection("blog")}
+                <a 
+                  href="/blog"
                   className="text-gray-700 hover:text-primary transition-colors"
                 >
                   Blog
-                </button>
+                </a>
                 <button 
                   onClick={() => scrollToSection("contact")}
                   className="text-gray-700 hover:text-primary transition-colors"
@@ -98,12 +110,12 @@ export default function Header() {
               >
                 Cas Clients
               </a>
-              <button 
-                onClick={() => scrollToSection("blog")}
+              <a 
+                href="/blog"
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
               >
                 Blog
-              </button>
+              </a>
               <button 
                 onClick={() => scrollToSection("contact")}
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"

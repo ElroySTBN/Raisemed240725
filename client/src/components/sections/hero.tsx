@@ -26,14 +26,14 @@ export default function Hero() {
                 className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600"
               >
                 <Rocket className="mr-2 h-5 w-5" />
-                Démarrer Mon Projet
+                Démarrer maintenant
               </Button>
               <Button 
                 variant="outline"
                 className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary bg-transparent"
               >
                 <Play className="mr-2 h-5 w-5" />
-                Voir une Démo
+                Obtenir un Audit GRATUIT
               </Button>
             </div>
           </div>

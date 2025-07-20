@@ -17,6 +17,13 @@ Preferred communication style: Simple, everyday language.
 - Created dedicated case studies page at `/cas-clients` with detailed success stories
 - Updated navigation to link to case studies page
 - Fixed LSP diagnostics errors in storage and contact form
+- Changed button texts: "Voir une Démo" → "Obtenir un Audit GRATUIT", "Démarrer Mon Projet" → "Démarrer maintenant"
+- Updated metrics: "+300% leads" → "+500k€ générés", added "4 pays desservis"
+- Anonymized all client testimonials and case studies
+- Created complete blog functionality with individual article pages
+- Added individual detailed case study pages with timeline and expanded metrics
+- Integrated RaiseMed.IA logo in header with homepage navigation
+- Added audit gratuit buttons across all pages
 
 ## System Architecture
 

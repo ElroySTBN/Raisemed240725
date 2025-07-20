@@ -32,7 +32,7 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full mr-4 object-cover" 
               />
               <div>
-                <div className="font-semibold text-dark">Dr. Sophie Laurent</div>
+                <div className="font-semibold text-dark">Dr. S.L.</div>
                 <div className="text-gray-600 text-sm">Chirurgien-dentiste, Nice</div>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full mr-4 object-cover" 
               />
               <div>
-                <div className="font-semibold text-dark">Marc Durand</div>
+                <div className="font-semibold text-dark">M.D.</div>
                 <div className="text-gray-600 text-sm">Plombier-chauffagiste, Toulouse</div>
               </div>
             </div>
@@ -80,8 +80,8 @@ export default function Testimonials() {
                 className="w-12 h-12 rounded-full mr-4 object-cover" 
               />
               <div>
-                <div className="font-semibold text-dark">Isabelle Moreau</div>
-                <div className="text-gray-600 text-sm">Directrice, Century 21 Bordeaux</div>
+                <div className="font-semibold text-dark">I.M.</div>
+                <div className="text-gray-600 text-sm">Directrice, Agence immobilière Bordeaux</div>
               </div>
             </div>
           </div>

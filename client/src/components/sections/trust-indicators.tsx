@@ -55,16 +55,16 @@ export default function TrustIndicators() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="p-6">
-            <div className="text-4xl font-bold text-primary mb-2">+300%</div>
-            <p className="text-gray-600">Augmentation moyenne des leads qualifiés</p>
+            <div className="text-4xl font-bold text-primary mb-2">+500k€</div>
+            <p className="text-gray-600">Générés pour nos clients</p>
           </div>
           <div className="p-6">
             <div className="text-4xl font-bold text-secondary mb-2">85%</div>
             <p className="text-gray-600">Taux de satisfaction client</p>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-accent mb-2">50+</div>
-            <p className="text-gray-600">Entreprises locales accompagnées</p>
+            <div className="text-4xl font-bold text-accent mb-2">4</div>
+            <p className="text-gray-600">Pays desservis</p>
           </div>
         </div>
       </div>

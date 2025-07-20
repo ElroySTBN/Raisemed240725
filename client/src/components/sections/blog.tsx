@@ -77,10 +77,12 @@ export default function Blog() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-primary text-white hover:bg-blue-700">
-            <Book className="mr-2 h-4 w-4" />
-            Voir tous nos articles
-          </Button>
+          <a href="/blog">
+            <Button className="bg-primary text-white hover:bg-blue-700">
+              <Book className="mr-2 h-4 w-4" />
+              Voir tous nos articles
+            </Button>
+          </a>
         </div>
       </div>
     </section>

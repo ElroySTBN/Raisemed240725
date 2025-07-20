@@ -36,16 +36,16 @@ export default function CaseStudiesPage() {
                       CM
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical Dubois</h2>
-                      <p className="text-gray-600 text-lg">Médecin généraliste • Lyon</p>
+                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical - Cas Client #1</h2>
+                      <p className="text-gray-600 text-lg">Médecin généraliste • Région Rhône-Alpes</p>
                     </div>
                   </div>
                   
                   <div className="bg-gray-50 rounded-2xl p-8 mb-8">
                     <h3 className="text-xl font-bold text-dark mb-4">Le défi</h3>
                     <p className="text-gray-700 mb-6">
-                      Le Dr. Dubois dépendait uniquement du bouche-à-oreille pour attirer de nouveaux patients. 
-                      Sa visibilité en ligne était quasi inexistante et il peinait à faire connaître ses spécialités 
+                      Ce cabinet médical dépendait uniquement du bouche-à-oreille pour attirer de nouveaux patients. 
+                      Sa visibilité en ligne était quasi inexistante et le praticien peinait à faire connaître ses spécialités 
                       (médecine du sport et nutrition).
                     </p>
                     
@@ -109,9 +109,16 @@ export default function CaseStudiesPage() {
                   "Avant RaiseMed.IA, je dépendais uniquement du bouche-à-oreille. Aujourd'hui, je suis visible sur Google 
                   et j'attire des patients qui cherchent vraiment mes spécialités. Mon agenda est complet 3 semaines à l'avance !"
                 </blockquote>
-                <div className="flex items-center">
-                  <User className="mr-3 w-5 h-5 text-gray-600" />
-                  <span className="font-semibold text-dark">Dr. Marie Dubois, Médecin généraliste</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <User className="mr-3 w-5 h-5 text-gray-600" />
+                    <span className="font-semibold text-dark">Dr. M.D., Médecin généraliste</span>
+                  </div>
+                  <Link href="/cas-clients/1">
+                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                      Voir le détail
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -133,15 +140,15 @@ export default function CaseStudiesPage() {
                       AI
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière Horizon</h2>
-                      <p className="text-gray-600 text-lg">Immobilier résidentiel • Marseille</p>
+                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière - Cas Client #2</h2>
+                      <p className="text-gray-600 text-lg">Immobilier résidentiel • Région PACA</p>
                     </div>
                   </div>
                   
                   <div className="bg-gray-50 rounded-2xl p-8 mb-8">
                     <h3 className="text-xl font-bold text-dark mb-4">Le défi</h3>
                     <p className="text-gray-700 mb-6">
-                      L'agence Horizon faisait face à une concurrence féroce sur Marseille. Leurs mandats étaient 
+                      Cette agence immobilière faisait face à une concurrence féroce dans sa région. Leurs mandats étaient 
                       irréguliers et ils avaient du mal à se différencier des grandes enseignes nationales.
                     </p>
                     
@@ -197,9 +204,16 @@ export default function CaseStudiesPage() {
                   "L'inbound marketing nous a permis de nous positionner comme experts du marché local. Nos clients 
                   nous trouvent naturellement quand ils sont prêts à vendre, et notre taux de transformation a explosé."
                 </blockquote>
-                <div className="flex items-center">
-                  <User className="mr-3 w-5 h-5 text-gray-600" />
-                  <span className="font-semibold text-dark">Jean-Pierre Martin, Directeur Agence</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <User className="mr-3 w-5 h-5 text-gray-600" />
+                    <span className="font-semibold text-dark">J.-P. M., Directeur Agence</span>
+                  </div>
+                  <Link href="/cas-clients/2">
+                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                      Voir le détail
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -213,15 +227,15 @@ export default function CaseStudiesPage() {
                       O2
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Optic 2000 Bordeaux</h2>
-                      <p className="text-gray-600 text-lg">Optique • Bordeaux</p>
+                      <h2 className="text-3xl font-bold text-dark">Magasin d'Optique - Cas Client #3</h2>
+                      <p className="text-gray-600 text-lg">Optique • Région Nouvelle-Aquitaine</p>
                     </div>
                   </div>
                   
                   <div className="bg-gray-50 rounded-2xl p-8 mb-8">
                     <h3 className="text-xl font-bold text-dark mb-4">Le défi</h3>
                     <p className="text-gray-700 mb-6">
-                      Face à la concurrence des opticiens en ligne, ce magasin Optic 2000 devait valoriser 
+                      Face à la concurrence des opticiens en ligne, ce magasin d'optique devait valoriser 
                       ses services personnalisés et attirer une clientèle locale fidèle.
                     </p>
                     
@@ -285,9 +299,16 @@ export default function CaseStudiesPage() {
                   "Grâce à RaiseMed.IA, nous avons réussi à créer une vraie relation de proximité avec nos clients. 
                   Ils reviennent non seulement pour leurs lunettes, mais aussi pour nos conseils personnalisés."
                 </blockquote>
-                <div className="flex items-center">
-                  <User className="mr-3 w-5 h-5 text-gray-600" />
-                  <span className="font-semibold text-dark">Sophie Moreau, Directrice Optic 2000</span>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <User className="mr-3 w-5 h-5 text-gray-600" />
+                    <span className="font-semibold text-dark">S.M., Directrice magasin</span>
+                  </div>
+                  <Link href="/cas-clients/3">
+                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                      Voir le détail
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
