@@ -138,11 +138,11 @@ export default function ContactForm() {
       </div>
       
       <div>
-        <Label htmlFor="challenge">Votre principal défi marketing</Label>
+        <Label htmlFor="challenge">Message (optionnel)</Label>
         <Textarea
           {...register("challenge")}
           rows={4}
-          placeholder="Décrivez brièvement votre situation actuelle et vos objectifs..."
+          placeholder="Décrivez brièvement votre projet ou vos questions..."
         />
       </div>
       

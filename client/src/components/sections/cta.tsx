@@ -35,20 +35,21 @@ export default function CTA() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            onClick={scrollToContact}
-            className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600"
-          >
-            <CalendarCheck className="mr-2 h-5 w-5" />
-            Réserver mon audit gratuit
-          </Button>
-          <Button 
-            variant="outline"
-            className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary"
-          >
-            <Phone className="mr-2 h-5 w-5" />
-            Appelez-nous : 01 23 45 67 89
-          </Button>
+          <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
+              <CalendarCheck className="mr-2 h-5 w-5" />
+              Réserver mon audit gratuit
+            </Button>
+          </a>
+          <a href="tel:0782492124">
+            <Button 
+              variant="outline"
+              className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Appelez-nous : 07 82 49 21 24
+            </Button>
+          </a>
         </div>
 
         <p className="text-sm text-blue-200 mt-6 flex items-center justify-center">

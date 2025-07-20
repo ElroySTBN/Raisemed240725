@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Rocket, Play } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -21,20 +22,21 @@ export default function Hero() {
               Transformez votre expertise en croissance durable. Solutions inbound marketing sur mesure pour entreprises locales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={scrollToContact}
-                className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600"
-              >
-                <Rocket className="mr-2 h-5 w-5" />
-                Démarrer maintenant
-              </Button>
-              <Button 
-                variant="outline"
-                className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary bg-transparent"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Obtenir un Audit GRATUIT
-              </Button>
+              <Link href="/offres">
+                <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
+                  <Rocket className="mr-2 h-5 w-5" />
+                  Démarrer maintenant
+                </Button>
+              </Link>
+              <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  variant="outline"
+                  className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary bg-transparent"
+                >
+                  <Play className="mr-2 h-5 w-5" />
+                  Obtenir un Audit GRATUIT
+                </Button>
+              </a>
             </div>
           </div>
           <div className="lg:text-right">
