@@ -92,10 +92,12 @@ export default function CaseStudies() {
 
         {/* Call to action */}
         <div className="text-center">
-          <Button className="bg-primary text-white hover:bg-blue-700">
-            <FileText className="mr-2 h-4 w-4" />
-            Voir tous nos cas clients
-          </Button>
+          <a href="/cas-clients">
+            <Button className="bg-primary text-white hover:bg-blue-700">
+              <FileText className="mr-2 h-4 w-4" />
+              Voir tous nos cas clients
+            </Button>
+          </a>
         </div>
       </div>
     </section>

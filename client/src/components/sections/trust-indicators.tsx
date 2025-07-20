@@ -4,25 +4,50 @@ export default function TrustIndicators() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-gray-600 font-medium mb-8">Ils nous font confiance</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
             <div className="text-center">
-              <div className="bg-gray-100 h-16 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-gray-500">CABINET MÉDICAL</span>
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                <img 
+                  src="/assets/Logo Pharma MC - SBG_1753043771294.png" 
+                  alt="Pharmacie Bergère" 
+                  className="max-h-12 max-w-full object-contain"
+                />
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-gray-100 h-16 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-gray-500">AGENCE IMMO</span>
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                <img 
+                  src="/assets/image_1753043820433.png" 
+                  alt="Century 21" 
+                  className="max-h-12 max-w-full object-contain"
+                />
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-gray-100 h-16 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-gray-500">ARTISAN BTP</span>
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                <img 
+                  src="/assets/image_1753043825883.png" 
+                  alt="Supra Sécurité" 
+                  className="max-h-12 max-w-full object-contain"
+                />
               </div>
             </div>
             <div className="text-center">
-              <div className="bg-gray-100 h-16 rounded-lg flex items-center justify-center">
-                <span className="font-bold text-gray-500">COMMERCE LOCAL</span>
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                <img 
+                  src="/assets/image_1753043831484.png" 
+                  alt="La Vaux Immobilier" 
+                  className="max-h-12 max-w-full object-contain"
+                />
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
+                <img 
+                  src="/assets/image_1753043896859.png" 
+                  alt="Optic 2000" 
+                  className="max-h-12 max-w-full object-contain"
+                />
               </div>
             </div>
           </div>

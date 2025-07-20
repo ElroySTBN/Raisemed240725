@@ -18,7 +18,7 @@ export default function Hero() {
               Faites connaître votre savoir-faire à ceux qui en ont le plus besoin
             </h1>
             <p className="text-xl mb-8 text-blue-100">
-              Nous optimisons votre présence locale et transformons vos prospects en clients grâce à l'inbound marketing data-driven et l'intelligence artificielle.
+              Transformez votre expertise en croissance durable. Solutions inbound marketing sur mesure pour entreprises locales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
@@ -30,7 +30,7 @@ export default function Hero() {
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary"
+                className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary bg-transparent"
               >
                 <Play className="mr-2 h-5 w-5" />
                 Voir une Démo

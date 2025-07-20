@@ -35,12 +35,12 @@ export default function Header() {
                 >
                   Méthodologie
                 </button>
-                <button 
-                  onClick={() => scrollToSection("cas-clients")}
+                <a 
+                  href="/cas-clients"
                   className="text-gray-700 hover:text-primary transition-colors"
                 >
                   Cas Clients
-                </button>
+                </a>
                 <button 
                   onClick={() => scrollToSection("blog")}
                   className="text-gray-700 hover:text-primary transition-colors"
@@ -92,12 +92,12 @@ export default function Header() {
               >
                 Méthodologie
               </button>
-              <button 
-                onClick={() => scrollToSection("cas-clients")}
+              <a 
+                href="/cas-clients"
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
               >
                 Cas Clients
-              </button>
+              </a>
               <button 
                 onClick={() => scrollToSection("blog")}
                 className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"

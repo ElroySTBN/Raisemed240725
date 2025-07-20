@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Ressources</h4>
             <ul className="space-y-2 text-gray-300">
               <li><button onClick={() => scrollToSection("blog")} className="hover:text-white transition-colors">Blog</button></li>
-              <li><button onClick={() => scrollToSection("cas-clients")} className="hover:text-white transition-colors">Cas clients</button></li>
+              <li><a href="/cas-clients" className="hover:text-white transition-colors">Cas clients</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Guides gratuits</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Webinaires</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Centre d'aide</a></li>

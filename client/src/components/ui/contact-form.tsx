@@ -150,7 +150,7 @@ export default function ContactForm() {
         <Checkbox
           id="terms"
           checked={acceptTerms}
-          onCheckedChange={setAcceptTerms}
+          onCheckedChange={(checked) => setAcceptTerms(checked === true)}
         />
         <Label htmlFor="terms" className="text-sm text-gray-600 leading-relaxed">
           J'accepte d'être contacté par RaiseMed.IA concernant mon projet marketing.{" "}

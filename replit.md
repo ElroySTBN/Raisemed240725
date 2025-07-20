@@ -8,6 +8,16 @@ This is a French inbound marketing agency website built with a modern full-stack
 
 Preferred communication style: Simple, everyday language.
 
+## Recent Changes
+
+### January 20, 2025
+- Fixed "Voir une Démo" button visibility by adding `bg-transparent` class
+- Updated hero section text to be more corporate and concise: "Transformez votre expertise en croissance durable. Solutions inbound marketing sur mesure pour entreprises locales."
+- Added real client logos in trust indicators section (Pharmacie Bergère, Century 21, Supra Sécurité, La Vaux Immobilier, Optic 2000)
+- Created dedicated case studies page at `/cas-clients` with detailed success stories
+- Updated navigation to link to case studies page
+- Fixed LSP diagnostics errors in storage and contact form
+
 ## System Architecture
 
 ### Frontend Architecture
