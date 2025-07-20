@@ -69,12 +69,11 @@ export default function Header() {
             </div>
           </div>
           <div className="hidden md:block">
-            <Button 
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary text-white hover:bg-blue-700"
-            >
-              Audit Gratuit
-            </Button>
+            <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-primary text-white hover:bg-blue-700">
+                Audit Gratuit
+              </Button>
+            </a>
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -123,12 +122,11 @@ export default function Header() {
                 Contact
               </button>
               <div className="px-3 py-2">
-                <Button 
-                  onClick={() => scrollToSection("contact")}
-                  className="w-full bg-primary text-white hover:bg-blue-700"
-                >
-                  Audit Gratuit
-                </Button>
+                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-primary text-white hover:bg-blue-700">
+                    Audit Gratuit
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

@@ -66,7 +66,7 @@ export default function OffersPage() {
                   </div>
                 </div>
 
-                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                <a href="https://buy.stripe.com/dR67urecxcHLdLW00g" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-primary text-white hover:bg-blue-700 py-3">
                     <CreditCard className="w-5 h-5 mr-2" />
                     Commencer maintenant
@@ -130,10 +130,10 @@ export default function OffersPage() {
                   </div>
                 </div>
 
-                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                <a href="https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full bg-white text-accent hover:bg-gray-100 py-3 font-bold">
                     <Star className="w-5 h-5 mr-2" />
-                    Choisir Gold
+                    Commencer maintenant
                   </Button>
                 </a>
               </div>
@@ -171,9 +171,9 @@ export default function OffersPage() {
                   </div>
                 </div>
 
-                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile." target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white py-3">
-                    <Phone className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-5 h-5 mr-2" />
                     Demander un devis
                   </Button>
                 </a>

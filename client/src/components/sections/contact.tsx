@@ -43,7 +43,7 @@ export default function Contact() {
           
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-dark mb-6">
-              Obtenez votre audit gratuit
+              Envoyez-nous un message
             </h3>
             <ContactForm />
           </div>

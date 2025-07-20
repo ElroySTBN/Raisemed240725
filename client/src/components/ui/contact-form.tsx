@@ -153,7 +153,7 @@ export default function ContactForm() {
           onCheckedChange={(checked) => setAcceptTerms(checked === true)}
         />
         <Label htmlFor="terms" className="text-sm text-gray-600 leading-relaxed">
-          J'accepte d'être contacté par RaiseMed.IA concernant mon projet marketing.{" "}
+          J'accepte d'être contacté par RaiseMed.IA.{" "}
           <a href="#" className="text-primary hover:underline">
             Politique de confidentialité
           </a>
@@ -170,14 +170,14 @@ export default function ContactForm() {
         ) : (
           <>
             <Send className="mr-2 h-5 w-5" />
-            Recevoir mon audit gratuit
+            Envoyer le message
           </>
         )}
       </Button>
       
       <p className="text-center text-sm text-gray-500 flex items-center justify-center">
         <Shield className="mr-1 w-4 h-4" />
-        Audit 100% gratuit et sans engagement
+        Vos données sont sécurisées et ne seront jamais partagées
       </p>
     </form>
   );
