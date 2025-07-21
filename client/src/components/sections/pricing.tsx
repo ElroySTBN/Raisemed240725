@@ -7,7 +7,7 @@ import { ScrollAnimation, StaggerContainer } from "@/components/animations/Scrol
 export default function Pricing() {
   const plans = [
     {
-      name: "STANDARD",
+      name: "",
       subtitle: "RaiseMed.IA Pro",
       price: "150",
       unit: "€/mois",
@@ -15,20 +15,22 @@ export default function Pricing() {
       commitment: "Sans engagement",
       popular: false,
       color: "bg-gray-600",
-      buttonText: "CHOISIR STANDARD",
+      buttonText: "CHOISIR CETTE OFFRE",
       buttonColor: "bg-gray-600 hover:bg-gray-700",
       features: [
-        "Audit complet",
-        "Google My Business",
-        "4 articles/mois",
-        "Campagnes ciblées",
-        "Analytics avancé",
-        "Support prioritaire",
-        "Formation équipe"
+        "Audit stratégique de votre visibilité en ligne",
+        "Veille concurrentielle locale",
+        "Optimisation de votre présence digitale",
+        "Gestion E-réputation",
+        "Création de contenu engageant",
+        "Campagnes multicanales d'attraction client",
+        "Analyse qualitative des tendances de recherche",
+        "Formation sur mesure pour votre équipe",
+        "Support prioritaire sur whatsapp et email"
       ]
     },
     {
-      name: "PROFESSIONNEL",
+      name: "",
       subtitle: "RaiseMed.IA Gold",
       price: "1760",
       unit: "€/an",
@@ -38,7 +40,7 @@ export default function Pricing() {
       commitment: "Engagement 12 mois",
       popular: true,
       color: "bg-primary",
-      buttonText: "CHOISIR PROFESSIONNEL",
+      buttonText: "CHOISIR CETTE OFFRE",
       buttonColor: "bg-primary hover:bg-blue-700",
       badge: "POPULAIRE",
       bonuses: [
@@ -47,18 +49,19 @@ export default function Pricing() {
         "Frais d'installation OFFERTS"
       ],
       features: [
-        "Tout Standard inclus",
-        "8 articles/mois",
-        "Automation avancée",
-        "Réseaux sociaux",
-        "A/B testing",
-        "Consultant dédié",
-        "Reporting exécutif",
-        "Accès beta"
+        "Audit stratégique de votre visibilité en ligne",
+        "Veille concurrentielle locale",
+        "Optimisation de votre présence digitale",
+        "Gestion E-réputation",
+        "Création de contenu engageant",
+        "Campagnes multicanales d'attraction client",
+        "Analyse qualitative des tendances de recherche",
+        "Formation sur mesure pour votre équipe",
+        "Support prioritaire sur whatsapp et email"
       ]
     },
     {
-      name: "ENTREPRISE",
+      name: "",
       subtitle: "Sur Devis",
       price: "Sur",
       priceSecondLine: "devis",
@@ -69,16 +72,7 @@ export default function Pricing() {
       color: "bg-secondary",
       buttonText: "DEMANDER UN DEVIS",
       buttonColor: "bg-secondary hover:bg-orange-600",
-      features: [
-        "Tout Professionnel",
-        "Stratégie sur mesure",
-        "Équipe dédiée",
-        "Intégrations custom",
-        "SLA garantie",
-        "Formation avancée",
-        "Support 24/7",
-        "Reporting personnalisé"
-      ]
+      features: []
     }
   ];
 
@@ -141,17 +135,8 @@ export default function Pricing() {
 
                 {/* Header avec nom du plan */}
                 <div className="text-center pt-8 pb-4 px-6">
-                  <motion.h3 
-                    className="text-sm font-bold text-gray-500 mb-1 tracking-wide"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    {plan.name}
-                  </motion.h3>
                   <motion.div 
-                    className="text-gray-700 font-semibold text-sm"
+                    className="text-gray-700 font-semibold text-lg"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -258,32 +243,34 @@ export default function Pricing() {
                 )}
 
                 {/* Liste des fonctionnalités */}
-                <div className="px-6 pb-6 flex-grow">
-                  <motion.div 
-                    className="text-center mb-3"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.8 }}
-                  >
-                    <span className="text-xs text-gray-500">Tout inclus :</span>
-                  </motion.div>
-                  <ul className="space-y-2">
-                    {plan.features.map((feature, featureIndex) => (
-                      <motion.li 
-                        key={featureIndex}
-                        className="flex items-center text-sm text-gray-600"
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 + 0.9 + featureIndex * 0.05 }}
-                      >
-                        <Check className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0" />
-                        <span className="leading-tight">{feature}</span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
+                {plan.features.length > 0 && (
+                  <div className="px-6 pb-6 flex-grow">
+                    <motion.div 
+                      className="text-center mb-3"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 + 0.8 }}
+                    >
+                      <span className="text-xs text-gray-500">Tout inclus :</span>
+                    </motion.div>
+                    <ul className="space-y-2">
+                      {plan.features.map((feature, featureIndex) => (
+                        <motion.li 
+                          key={featureIndex}
+                          className="flex items-start text-sm text-gray-600"
+                          initial={{ opacity: 0, x: -10 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: index * 0.1 + 0.9 + featureIndex * 0.05 }}
+                        >
+                          <Check className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0 mt-0.5" />
+                          <span className="leading-tight">{feature}</span>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </HoverEffect>
           ))}
