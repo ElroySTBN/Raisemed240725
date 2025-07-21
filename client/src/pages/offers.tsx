@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { Check, Star, Gift, CreditCard, Phone, Mail } from "lucide-react";
+import { Check, Star, Gift, CreditCard, Phone, Mail, MessageCircle } from "lucide-react";
 
 export default function OffersPage() {
   return (
