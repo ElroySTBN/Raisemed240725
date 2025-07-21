@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { FileText, User } from "lucide-react";
+import { FileText, User, Stethoscope, Home } from "lucide-react";
 
 export default function CaseStudies() {
   return (
@@ -18,12 +18,12 @@ export default function CaseStudies() {
           {/* Case Study 1 */}
           <div className="bg-gradient-to-br from-blue-50 to-primary/5 rounded-2xl p-8">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-xl mr-4">
-                CM
+              <div className="w-16 h-16 bg-primary text-white rounded-xl flex items-center justify-center mr-4">
+                <Stethoscope className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-dark">Cabinet Médical Dubois</h3>
-                <p className="text-gray-600">Médecin généraliste, Lyon</p>
+                <h3 className="text-xl font-bold text-dark">Cabinet Médical</h3>
+                <p className="text-gray-600">Médecine générale</p>
               </div>
             </div>
             
@@ -43,24 +43,24 @@ export default function CaseStudies() {
             </div>
             
             <blockquote className="text-gray-700 italic mb-4">
-              "Avant RaiseMed.IA, je dépendais uniquement du bouche-à-oreille. Aujourd'hui, je suis visible sur Google et j'attire des patients qui cherchent vraiment mes spécialités."
+              "Avant RaiseMed.IA, nous dépendions uniquement du bouche-à-oreille. Aujourd'hui, nous sommes visibles sur Google et nous attirons des patients qui cherchent vraiment nos spécialités."
             </blockquote>
             
             <div className="flex items-center text-gray-600 text-sm">
               <User className="mr-2 w-4 h-4" />
-              <span>Dr. Marie Dubois, Médecin généraliste</span>
+              <span>Médecin généraliste</span>
             </div>
           </div>
 
           {/* Case Study 2 */}
           <div className="bg-gradient-to-br from-green-50 to-secondary/5 rounded-2xl p-8">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-secondary text-white rounded-xl flex items-center justify-center font-bold text-xl mr-4">
-                AI
+              <div className="w-16 h-16 bg-secondary text-white rounded-xl flex items-center justify-center mr-4">
+                <Home className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-dark">Agence Immobilière Horizon</h3>
-                <p className="text-gray-600">Immobilier résidentiel, Marseille</p>
+                <h3 className="text-xl font-bold text-dark">Agence Immobilière</h3>
+                <p className="text-gray-600">Immobilier résidentiel</p>
               </div>
             </div>
             
@@ -85,7 +85,7 @@ export default function CaseStudies() {
             
             <div className="flex items-center text-gray-600 text-sm">
               <User className="mr-2 w-4 h-4" />
-              <span>Jean-Pierre Martin, Directeur Agence</span>
+              <span>Directeur Agence</span>
             </div>
           </div>
         </div>
