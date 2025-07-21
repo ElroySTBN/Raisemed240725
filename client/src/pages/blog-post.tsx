@@ -376,7 +376,7 @@ export default function BlogPost() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
               <div className="text-white">
                 <Link href="/blog">
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-dark mb-6">
+                  <Button className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-dark mb-6">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Retour au blog
                   </Button>
@@ -413,7 +413,23 @@ export default function BlogPost() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center mb-8">
               <div className="flex space-x-4">
-                <Button variant="outline" size="sm">
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => {
+                    if (navigator.share) {
+                      navigator.share({
+                        title: post.title,
+                        text: `Découvrez cet article : ${post.title}`,
+                        url: window.location.href
+                      });
+                    } else {
+                      navigator.clipboard.writeText(window.location.href);
+                      alert('Lien copié dans le presse-papiers !');
+                    }
+                  }}
+                  className="border-primary text-primary hover:bg-primary hover:text-white"
+                >
                   <Share2 className="w-4 h-4 mr-2" />
                   Partager
                 </Button>
@@ -449,13 +465,13 @@ export default function BlogPost() {
               Notre équipe d'experts peut vous accompagner dans la mise en place de votre stratégie inbound marketing
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#contact">
+              <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
                   Obtenir un audit gratuit
                 </Button>
-              </Link>
+              </a>
               <Link href="/blog">
-                <Button variant="outline" className="border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
+                <Button className="bg-white/20 backdrop-blur-sm border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
                   Voir d'autres articles
                 </Button>
               </Link>

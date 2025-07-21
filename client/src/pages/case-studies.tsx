@@ -73,8 +73,8 @@ export default function CaseStudiesPage() {
                 
                 <div className="order-1 lg:order-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-                    alt="Cabinet médical moderne" 
+                    src="/assets/doctor-case-study.png" 
+                    alt="Dr. Marie - Médecin généraliste" 
                     className="rounded-2xl shadow-xl w-full h-auto" 
                   />
                 </div>
@@ -115,7 +115,11 @@ export default function CaseStudiesPage() {
                     <span className="font-semibold text-dark">Dr. M.D., Médecin généraliste</span>
                   </div>
                   <Link href="/cas-clients/1">
-                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                    <Button 
+                      variant="outline" 
+                      className="text-primary border-primary hover:bg-primary hover:text-white"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
                       Voir le détail
                     </Button>
                   </Link>
@@ -210,7 +214,11 @@ export default function CaseStudiesPage() {
                     <span className="font-semibold text-dark">J.-P. M., Directeur Agence</span>
                   </div>
                   <Link href="/cas-clients/2">
-                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                    <Button 
+                      variant="outline" 
+                      className="text-primary border-primary hover:bg-primary hover:text-white"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
                       Voir le détail
                     </Button>
                   </Link>
@@ -305,7 +313,11 @@ export default function CaseStudiesPage() {
                     <span className="font-semibold text-dark">S.M., Directrice magasin</span>
                   </div>
                   <Link href="/cas-clients/3">
-                    <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
+                    <Button 
+                      variant="outline" 
+                      className="text-primary border-primary hover:bg-primary hover:text-white"
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    >
                       Voir le détail
                     </Button>
                   </Link>
@@ -325,11 +337,11 @@ export default function CaseStudiesPage() {
               Découvrez comment nous pouvons transformer votre croissance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#contact">
+              <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
                   Obtenir mon audit gratuit
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </section>

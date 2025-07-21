@@ -139,7 +139,7 @@ export default function CaseStudyDetail() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
               <div className="text-white">
                 <Link href="/cas-clients">
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-dark mb-6">
+                  <Button className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-dark mb-6">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Retour aux cas clients
                   </Button>
@@ -295,13 +295,13 @@ export default function CaseStudyDetail() {
               Découvrez comment nous pouvons transformer votre croissance
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#contact">
+              <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
                   Obtenir un audit gratuit
                 </Button>
-              </Link>
+              </a>
               <Link href="/cas-clients">
-                <Button variant="outline" className="border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
+                <Button className="bg-white/20 backdrop-blur-sm border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
                   Voir d'autres cas clients
                 </Button>
               </Link>
