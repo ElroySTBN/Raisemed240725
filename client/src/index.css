@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 3D Perspective and ScrollTrigger Styles */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations for creative scroll effects */
+@keyframes morphGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-morph-gradient {
+  background-size: 200% 200%;
+  animation: morphGradient 8s ease infinite;
+}
+
+/* Improved clip path animations */
+@keyframes revealClip {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0% 0 0 0); }
+}
+
+.animate-reveal-clip {
+  animation: revealClip 1.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+/* Liquid morphing effect */
+@keyframes liquidDrop {
+  0% { 
+    border-radius: 50%; 
+    transform: scale(0) translateY(-50px);
+  }
+  50% { 
+    border-radius: 30%; 
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% { 
+    border-radius: 12px; 
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-liquid-drop {
+  animation: liquidDrop 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Enhanced glow effects */
+.glow-effect {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.2),
+    0 0 80px rgba(59, 130, 246, 0.1);
+}
+
+.glow-effect-accent {
+  box-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.4),
+    0 0 40px rgba(251, 191, 36, 0.3),
+    0 0 80px rgba(251, 191, 36, 0.1);
+}
+
+/* Magnetic hover effect enhancement */
+.magnetic-element {
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  will-change: transform;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(222, 84%, 4.9%);

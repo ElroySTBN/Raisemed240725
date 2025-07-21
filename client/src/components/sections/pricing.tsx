@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Check, Star, Gift, CreditCard, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation, StaggerContainer } from "@/components/animations/ScrollAnimations";
+import { ScrollAnimation, StaggerContainer, RevealText, MagneticElement } from "@/components/animations/ScrollAnimations";
+import { ElasticEntrance, PerspectiveCard, TypewriterText } from "@/components/animations/ScrollTriggerEffects";
 
 export default function Pricing() {
   const plans = [

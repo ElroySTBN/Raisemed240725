@@ -1,7 +1,8 @@
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation, StaggerContainer } from "@/components/animations/ScrollAnimations";
+import { ScrollAnimation, StaggerContainer, RevealText, ParallaxScroll, MagneticElement } from "@/components/animations/ScrollAnimations";
+import { ElasticEntrance, PerspectiveCard, FloatingElements } from "@/components/animations/ScrollTriggerEffects";
 
 export default function Testimonials() {
   const testimonials = [
@@ -30,61 +31,45 @@ export default function Testimonials() {
 
   return (
     <section className="bg-white py-20 relative overflow-hidden">
-      {/* Background animations */}
-      <motion.div
-        className="absolute top-10 left-10 w-20 h-20 bg-accent/10 rounded-full blur-xl"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.3, 0.7, 0.3],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-20 w-16 h-16 bg-primary/10 rounded-full blur-xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [-10, 10, -10],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-      />
+      {/* Enhanced floating elements */}
+      <FloatingElements />
+      
+      <ParallaxScroll speed={0.2} className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.7, 0.3],
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </ParallaxScroll>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeIn" className="text-center mb-16">
-          <motion.h2 
+        <div className="text-center mb-16">
+          <RevealText
+            text="Ce que disent nos clients"
             className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Ce que disent nos clients
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-gray-600"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Leur succès parle pour nous
-          </motion.p>
-        </ScrollAnimation>
+            delay={0.2}
+            duration={1.5}
+          />
+          <ScrollAnimation animation="elastic" delay={1}>
+            <p className="text-xl text-gray-600">
+              Leur succès parle pour nous
+            </p>
+          </ScrollAnimation>
+        </div>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.25}>
           {testimonials.map((testimonial, index) => (
-            <HoverEffect 
+            <PerspectiveCard 
               key={index}
-              effect="lift" 
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg"
+              className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg glow-effect transform transition-all duration-300 hover:shadow-2xl"
             >
               <motion.div 
                 className="flex items-center mb-4"
@@ -142,7 +127,7 @@ export default function Testimonials() {
                   <div className="text-gray-600 text-sm">{testimonial.role}</div>
                 </div>
               </motion.div>
-            </HoverEffect>
+            </PerspectiveCard>
           ))}
         </StaggerContainer>
       </div>

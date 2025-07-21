@@ -11,12 +11,16 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 ### January 21, 2025
-- Fixed white-on-white button visibility issues across multiple pages:
-  - "Retour aux cas clients" buttons in case study detail pages
-  - "Appelez-nous" button in CTA section
-  - "Obtenir un Audit GRATUIT" button in hero section
-  - "Retour au blog" and "Voir d'autres articles" buttons in blog posts
-  - Footer links hover color changed from white to blue for better visibility
+- Added advanced ScrollTrigger animations and creative scroll effects throughout the website:
+  - Enhanced ScrollAnimations.tsx with 9 new animation types: revealUp, morphIn, slideRotate, elastic, typewriter, magneticReveal, liquidDrop, prismShift
+  - Created ScrollTriggerEffects.tsx with professional components: ParallaxScroll, RevealText, MagneticElement, AnimatedCounter, Rotating3DCard, ElasticEntrance, TypewriterText, FloatingElements, PerspectiveCard
+  - Updated hero section with morphing gradient background, floating elements, magnetic buttons, and 3D perspective image
+  - Enhanced services section with 3D rotating cards, elastic entrances, and magnetic elements
+  - Improved methodology section with text reveal animations and sliding text effects  
+  - Upgraded testimonials with perspective cards, parallax backgrounds, and enhanced floating elements
+  - Added custom CSS animations for 3D effects, liquid morphing, glow effects, and enhanced hover states
+  - Implemented smooth scrolling and professional cubic-bezier easing curves throughout
+- Fixed white-on-white button visibility issues across multiple pages
 - Corrected header navigation to properly redirect to homepage sections instead of creating duplicate pages
 - Removed opacity from client logos in trust indicators section for better visibility
 - Fixed image path encoding for "Logo Pharma MC - SBG" with spaces in filename

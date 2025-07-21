@@ -1,7 +1,8 @@
 import { Check, X, Megaphone } from "lucide-react";
 import { motion } from "framer-motion";
 import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation } from "@/components/animations/ScrollAnimations";
+import { ScrollAnimation, RevealText, MagneticElement, StaggerContainer } from "@/components/animations/ScrollAnimations";
+import { SlidingTextReveal, Rotating3DCard, ElasticEntrance } from "@/components/animations/ScrollTriggerEffects";
 
 export default function Methodology() {
   return (
@@ -34,26 +35,19 @@ export default function Methodology() {
       />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeIn" className="text-center mb-16">
-          <motion.h2 
+        <div className="text-center mb-16">
+          <RevealText
+            text="Comment l'inbound marketing révolutionne votre acquisition"
             className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Comment l'inbound marketing révolutionne votre acquisition
-          </motion.h2>
-          <motion.p 
+            delay={0}
+            duration={1.5}
+          />
+          <SlidingTextReveal
+            text="Notre méthodologie éprouvée transforme les visiteurs en ambassadeurs de votre marque"
             className="text-xl text-gray-600 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Notre méthodologie éprouvée transforme les visiteurs en ambassadeurs de votre marque
-          </motion.p>
-        </ScrollAnimation>
+            direction="up"
+          />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>

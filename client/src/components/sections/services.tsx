@@ -1,7 +1,8 @@
 import { Magnet, Shield, TrendingUp, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation, StaggerContainer } from "@/components/animations/ScrollAnimations";
+import { ScrollAnimation, StaggerContainer, RevealText, MagneticElement } from "@/components/animations/ScrollAnimations";
+import { Rotating3DCard, ElasticEntrance, FloatingElements } from "@/components/animations/ScrollTriggerEffects";
 
 export default function Services() {
   return (
@@ -14,30 +15,23 @@ export default function Services() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-20">
-          <motion.h2 
+          <RevealText
+            text="Notre approche inbound marketing révolutionnaire"
             className="text-4xl lg:text-6xl font-bold text-dark mb-8 bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            Notre approche inbound marketing révolutionnaire
-          </motion.h2>
-          <motion.p 
-            className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Découvrez comment l'inbound marketing peut transformer votre entreprise locale en aimant à prospects qualifiés
-          </motion.p>
+            delay={0}
+            duration={1.5}
+          />
+          <ScrollAnimation animation="morphIn" delay={0.8}>
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+              Découvrez comment l'inbound marketing peut transformer votre entreprise locale en aimant à prospects qualifiés
+            </p>
+          </ScrollAnimation>
         </div>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <HoverEffect 
-            effect="lift"
-            className="bg-gradient-to-br from-primary to-blue-700 text-white p-10 rounded-3xl shadow-2xl border border-blue-600/20 relative overflow-hidden"
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" staggerDelay={0.2}>
+          <Rotating3DCard
+            className="bg-gradient-to-br from-primary to-blue-700 text-white p-10 rounded-3xl shadow-2xl border border-blue-600/20 relative overflow-hidden glow-effect"
+            rotationIntensity={10}
           >
             <motion.div
               className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"
@@ -74,11 +68,11 @@ export default function Services() {
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Contenu expert métier</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Stratégie réseaux sociaux</li>
             </ul>
-          </HoverEffect>
+          </Rotating3DCard>
 
-          <HoverEffect 
-            effect="lift"
-            className="bg-gradient-to-br from-secondary to-green-700 text-white p-10 rounded-3xl shadow-2xl border border-green-600/20 relative overflow-hidden"
+          <ElasticEntrance 
+            className="bg-gradient-to-br from-secondary to-green-700 text-white p-10 rounded-3xl shadow-2xl border border-green-600/20 relative overflow-hidden glow-effect-accent"
+            delay={0.3}
           >
             <motion.div
               className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full blur-xl"
@@ -116,11 +110,11 @@ export default function Services() {
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Monitoring de réputation</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Stratégie de réponse</li>
             </ul>
-          </HoverEffect>
+          </ElasticEntrance>
 
-          <HoverEffect 
-            effect="lift"
-            className="bg-gradient-to-br from-accent to-orange-600 text-white p-10 rounded-3xl shadow-2xl border border-orange-600/20 relative overflow-hidden"
+          <MagneticElement 
+            strength={25}
+            className="bg-gradient-to-br from-accent to-orange-600 text-white p-10 rounded-3xl shadow-2xl border border-orange-600/20 relative overflow-hidden glow-effect-accent transform transition-all duration-300 hover:scale-105"
           >
             <motion.div
               className="absolute top-1/2 right-0 w-20 h-20 bg-white/10 rounded-full blur-xl"
@@ -160,7 +154,7 @@ export default function Services() {
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />ROI transparent</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Veille concurrentielle</li>
             </ul>
-          </HoverEffect>
+          </MagneticElement>
         </StaggerContainer>
       </div>
     </section>
