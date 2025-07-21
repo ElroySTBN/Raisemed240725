@@ -8,7 +8,7 @@ import { Link } from "wouter";
 const caseStudies = {
   1: {
     title: "Cabinet Médical - Transformation Digitale Réussie",
-    subtitle: "Médecine générale • Région Rhône-Alpes",
+    subtitle: "Médecine générale",
     category: "Santé",
     duration: "6 mois",
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600",
@@ -25,8 +25,8 @@ const caseStudies = {
       metric3: { value: "-60%", label: "Coût d'acquisition par patient", color: "accent" }
     },
     testimonial: {
-      quote: "Avant RaiseMed.IA, je dépendais uniquement du bouche-à-oreille. Aujourd'hui, je suis visible sur Google et j'attire des patients qui cherchent vraiment mes spécialités. Mon agenda est complet 3 semaines à l'avance !",
-      author: "Dr. M.D., Médecin généraliste"
+      quote: "Avant RaiseMed.IA, nous dépendions uniquement du bouche-à-oreille. Aujourd'hui, nous sommes visibles sur Google et nous attirons des patients qui cherchent vraiment nos spécialités. Notre agenda est complet 3 semaines à l'avance !",
+      author: "Médecin généraliste"
     },
     timeline: [
       { month: "Mois 1", action: "Audit complet et optimisation GMB" },
@@ -38,7 +38,7 @@ const caseStudies = {
   },
   2: {
     title: "Agence Immobilière - Leadership Local Conquis",
-    subtitle: "Immobilier résidentiel • Région PACA",
+    subtitle: "Immobilier résidentiel",
     category: "Immobilier",
     duration: "8 mois",
     image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600",
@@ -56,7 +56,7 @@ const caseStudies = {
     },
     testimonial: {
       quote: "L'inbound marketing nous a permis de nous positionner comme experts du marché local. Nos clients nous trouvent naturellement quand ils sont prêts à vendre, et notre taux de transformation a explosé.",
-      author: "J.-P. M., Directeur Agence"
+      author: "Directeur Agence"
     },
     timeline: [
       { month: "Mois 1-2", action: "Analyse du marché local et création de personas" },
@@ -68,7 +68,7 @@ const caseStudies = {
   },
   3: {
     title: "Magasin d'Optique - Fidélisation Client Maximisée",
-    subtitle: "Optique • Région Nouvelle-Aquitaine",
+    subtitle: "Commerce d'optique",
     category: "Commerce Local",
     duration: "5 mois",
     image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600",
@@ -86,7 +86,7 @@ const caseStudies = {
     },
     testimonial: {
       quote: "Grâce à RaiseMed.IA, nous avons réussi à créer une vraie relation de proximité avec nos clients. Ils reviennent non seulement pour leurs lunettes, mais aussi pour nos conseils personnalisés.",
-      author: "S.M., Directrice magasin"
+      author: "Directrice magasin"
     },
     timeline: [
       { month: "Mois 1", action: "Audit de la concurrence et positionnement" },

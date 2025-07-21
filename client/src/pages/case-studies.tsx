@@ -36,8 +36,8 @@ export default function CaseStudiesPage() {
                       <Stethoscope className="w-10 h-10" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical Dubois</h2>
-                      <p className="text-gray-600 text-lg">Médecin généraliste, Lyon</p>
+                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical</h2>
+                      <p className="text-gray-600 text-lg">Médecine générale</p>
                     </div>
                   </div>
                   
@@ -106,13 +106,13 @@ export default function CaseStudiesPage() {
               
               <div className="bg-blue-50 rounded-2xl p-8 mt-8">
                 <blockquote className="text-lg text-gray-800 italic mb-4">
-                  "Avant RaiseMed.IA, je dépendais uniquement du bouche-à-oreille. Aujourd'hui, je suis visible sur Google 
-                  et j'attire des patients qui cherchent vraiment mes spécialités. Mon agenda est complet 3 semaines à l'avance !"
+                  "Avant RaiseMed.IA, nous dépendions uniquement du bouche-à-oreille. Aujourd'hui, nous sommes visibles sur Google 
+                  et nous attirons des patients qui cherchent vraiment nos spécialités. Notre agenda est complet 3 semaines à l'avance !"
                 </blockquote>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <User className="mr-3 w-5 h-5 text-gray-600" />
-                    <span className="font-semibold text-dark">Dr. Marie Dubois, Médecin généraliste</span>
+                    <span className="font-semibold text-dark">Médecin généraliste</span>
                   </div>
                   <Link href="/cas-clients/1">
                     <Button 
@@ -144,8 +144,8 @@ export default function CaseStudiesPage() {
                       <Home className="w-10 h-10" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière Horizon</h2>
-                      <p className="text-gray-600 text-lg">Immobilier résidentiel, Marseille</p>
+                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière</h2>
+                      <p className="text-gray-600 text-lg">Immobilier résidentiel</p>
                     </div>
                   </div>
                   
@@ -211,7 +211,7 @@ export default function CaseStudiesPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <User className="mr-3 w-5 h-5 text-gray-600" />
-                    <span className="font-semibold text-dark">Jean-Pierre Martin, Directeur Agence</span>
+                    <span className="font-semibold text-dark">Directeur Agence</span>
                   </div>
                   <Link href="/cas-clients/2">
                     <Button 
@@ -235,8 +235,8 @@ export default function CaseStudiesPage() {
                       <Eye className="w-10 h-10" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Magasin d'Optique - Cas Client #3</h2>
-                      <p className="text-gray-600 text-lg">Optique • Région Nouvelle-Aquitaine</p>
+                      <h2 className="text-3xl font-bold text-dark">Magasin d'Optique</h2>
+                      <p className="text-gray-600 text-lg">Commerce d'optique</p>
                     </div>
                   </div>
                   
@@ -310,7 +310,7 @@ export default function CaseStudiesPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <User className="mr-3 w-5 h-5 text-gray-600" />
-                    <span className="font-semibold text-dark">S.M., Directrice magasin</span>
+                    <span className="font-semibold text-dark">Directrice magasin</span>
                   </div>
                   <Link href="/cas-clients/3">
                     <Button 
