@@ -206,7 +206,7 @@ export default function Pricing() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
                   >
-                    {plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMédia PRO" ? (
+                    {plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMed.IA Pro" ? (
                       <Button 
                         asChild 
                         className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
@@ -215,7 +215,7 @@ export default function Pricing() {
                           {plan.buttonText}
                         </a>
                       </Button>
-                    ) : plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMédia Gold" ? (
+                    ) : plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMed.IA Gold" ? (
                       <Button 
                         asChild 
                         className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
