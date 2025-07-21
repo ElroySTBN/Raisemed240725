@@ -234,8 +234,13 @@ export default function Pricing() {
                         </a>
                       </Button>
                     ) : (
-                      <Button className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}>
-                        {plan.buttonText}
+                      <Button 
+                        asChild 
+                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
+                      >
+                        <a href="https://buy.stripe.com/dR67urecxcHLdLW00g" target="_blank" rel="noopener noreferrer">
+                          {plan.buttonText}
+                        </a>
                       </Button>
                     )}
                   </motion.div>
