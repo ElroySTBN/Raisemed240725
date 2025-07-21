@@ -30,8 +30,7 @@ export default function Hero() {
               </Link>
               <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
                 <Button 
-                  variant="outline"
-                  className="border-2 border-white text-white px-8 py-4 hover:bg-white hover:text-primary bg-transparent"
+                  className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary"
                 >
                   <Play className="mr-2 h-5 w-5" />
                   Obtenir un Audit GRATUIT

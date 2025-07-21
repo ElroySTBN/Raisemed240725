@@ -112,7 +112,7 @@ export default function CaseStudyDetail() {
             <h1 className="text-3xl font-bold text-dark mb-4">Cas client non trouvé</h1>
             <p className="text-gray-600 mb-8">Le cas client que vous recherchez n'existe pas.</p>
             <Link href="/cas-clients">
-              <Button>
+              <Button className="bg-primary text-white hover:bg-blue-700">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Retour aux cas clients
               </Button>
@@ -139,7 +139,7 @@ export default function CaseStudyDetail() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
               <div className="text-white">
                 <Link href="/cas-clients">
-                  <Button className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-dark mb-6">
+                  <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary mb-6">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Retour aux cas clients
                   </Button>
@@ -301,7 +301,7 @@ export default function CaseStudyDetail() {
                 </Button>
               </a>
               <Link href="/cas-clients">
-                <Button className="bg-white/20 backdrop-blur-sm border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
+                <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
                   Voir d'autres cas clients
                 </Button>
               </Link>

@@ -8,7 +8,14 @@ export default function Header() {
   const scrollToSection = (sectionId: string) => {
     // If we're not on the home page, navigate to home first
     if (window.location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
+      window.location.href = '/';
+      // Use a timeout to ensure page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
       return;
     }
     

@@ -376,7 +376,7 @@ export default function BlogPost() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
               <div className="text-white">
                 <Link href="/blog">
-                  <Button className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white hover:text-dark mb-6">
+                  <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary mb-6">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Retour au blog
                   </Button>
@@ -471,7 +471,7 @@ export default function BlogPost() {
                 </Button>
               </a>
               <Link href="/blog">
-                <Button className="bg-white/20 backdrop-blur-sm border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
+                <Button className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary">
                   Voir d'autres articles
                 </Button>
               </Link>

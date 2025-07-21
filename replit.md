@@ -10,6 +10,17 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Changes
 
+### January 21, 2025
+- Fixed white-on-white button visibility issues across multiple pages:
+  - "Retour aux cas clients" buttons in case study detail pages
+  - "Appelez-nous" button in CTA section
+  - "Obtenir un Audit GRATUIT" button in hero section
+  - "Retour au blog" and "Voir d'autres articles" buttons in blog posts
+  - Footer links hover color changed from white to blue for better visibility
+- Corrected header navigation to properly redirect to homepage sections instead of creating duplicate pages
+- Removed opacity from client logos in trust indicators section for better visibility
+- Fixed image path encoding for "Logo Pharma MC - SBG" with spaces in filename
+
 ### January 20, 2025
 - Fixed "Voir une Démo" button visibility by adding `bg-transparent` class
 - Updated hero section text to be more corporate and concise: "Transformez votre expertise en croissance durable. Solutions inbound marketing sur mesure pour entreprises locales."
