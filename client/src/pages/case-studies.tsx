@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { User, ArrowRight, TrendingUp, Users, DollarSign, Stethoscope } from "lucide-react";
+import { User, ArrowRight, TrendingUp, Users, DollarSign, Stethoscope, Home } from "lucide-react";
 import { Link } from "wouter";
 
 export default function CaseStudiesPage() {
@@ -140,8 +140,8 @@ export default function CaseStudiesPage() {
                 
                 <div>
                   <div className="flex items-center mb-6">
-                    <div className="w-20 h-20 bg-secondary text-white rounded-xl flex items-center justify-center font-bold text-2xl mr-6">
-                      AI
+                    <div className="w-20 h-20 bg-secondary text-white rounded-xl flex items-center justify-center mr-6">
+                      <Home className="w-10 h-10" />
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-dark">Agence Immobilière - Cas Client #2</h2>
