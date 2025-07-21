@@ -327,8 +327,13 @@ export default function Pricing() {
             <p className="text-gray-600 text-sm mb-4">
               Nos experts vous accompagnent gratuitement dans le choix de la solution la plus adaptée à vos besoins.
             </p>
-            <Button className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-              Demander un conseil gratuit
+            <Button 
+              asChild 
+              className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <a href="https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile" target="_blank" rel="noopener noreferrer">
+                Demander un conseil gratuit
+              </a>
             </Button>
           </motion.div>
         </ScrollAnimation>
