@@ -238,7 +238,7 @@ export default function Pricing() {
                         asChild 
                         className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
                       >
-                        <a href="https://buy.stripe.com/dR67urecxcHLdLW00g" target="_blank" rel="noopener noreferrer">
+                        <a href="https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k" target="_blank" rel="noopener noreferrer">
                           {plan.buttonText}
                         </a>
                       </Button>
