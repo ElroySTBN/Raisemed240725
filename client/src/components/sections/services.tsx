@@ -1,4 +1,4 @@
-import { Magnet, Bot, TrendingUp, Check } from "lucide-react";
+import { Magnet, Shield, TrendingUp, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Services() {
@@ -57,16 +57,16 @@ export default function Services() {
             data-aos-delay="600"
           >
             <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '2s' }}>
-              <Bot className="h-8 w-8" />
+              <Shield className="h-8 w-8" />
             </div>
-            <h3 className="text-2xl font-bold mb-6">IA & Automation</h3>
+            <h3 className="text-2xl font-bold mb-6">E-réputation</h3>
             <p className="text-green-100 mb-8 text-lg leading-relaxed">
-              Nos outils d'intelligence artificielle qualifient et nurturent vos prospects automatiquement 24h/24.
+              Gérez et améliorez votre réputation en ligne pour renforcer la confiance et attirer plus de clients locaux.
             </p>
             <ul className="space-y-3 text-green-100">
-              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Lead scoring automatique</li>
-              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Chatbots intelligents</li>
-              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Email marketing personnalisé</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Gestion des avis clients</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Monitoring de réputation</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Stratégie de réponse</li>
             </ul>
           </motion.div>
 
@@ -80,14 +80,14 @@ export default function Services() {
             <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '4s' }}>
               <TrendingUp className="h-8 w-8" />
             </div>
-            <h3 className="text-2xl font-bold mb-6">Data-Driven Results</h3>
+            <h3 className="text-2xl font-bold mb-6">Résultats Data-Driven</h3>
             <p className="text-orange-100 mb-8 text-lg leading-relaxed">
-              Chaque action est mesurée et optimisée grâce à nos tableaux de bord en temps réel.
+              Chaque action est mesurée et optimisée grâce à nos rapports mensuels et veille concurrentielle continue.
             </p>
             <ul className="space-y-3 text-orange-100">
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />KPIs personnalisés</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />ROI transparent</li>
-              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Optimisation continue</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Veille concurrentielle</li>
             </ul>
           </motion.div>
         </div>

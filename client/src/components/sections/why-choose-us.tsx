@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
               Nous nous engageons sur des KPIs précis et vous offrons une transparence totale sur vos investissements.
             </p>
             <ul className="space-y-2 text-gray-600">
-              <li className="flex items-center"><Check className="text-secondary mr-2 w-4 h-4" />Tableaux de bord en temps réel</li>
+              <li className="flex items-center"><Check className="text-secondary mr-2 w-4 h-4" />Rapports mensuels détaillés</li>
               <li className="flex items-center"><Check className="text-secondary mr-2 w-4 h-4" />ROI transparent et mesurable</li>
               <li className="flex items-center"><Check className="text-secondary mr-2 w-4 h-4" />Engagement de performance</li>
             </ul>

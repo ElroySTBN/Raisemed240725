@@ -21,7 +21,7 @@ export default function TrustIndicators() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Rejoignez plus de 50+ entreprises locales qui ont transformé leur croissance avec nos stratégies inbound
+            Rejoignez plus de 50+ entreprises partenaires qui ont transformé leur croissance avec nos stratégies inbound
           </motion.p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center" data-aos="fade-up" data-aos-delay="400">
             <motion.div 
@@ -106,8 +106,10 @@ export default function TrustIndicators() {
             whileHover={{ scale: 1.05, y: -10 }}
             transition={{ duration: 0.3, delay: 0.1 }}
           >
-            <div className="text-5xl font-bold bg-gradient-to-r from-secondary to-green-600 bg-clip-text text-transparent mb-3">85%</div>
-            <p className="text-gray-600 font-medium">Taux de satisfaction client</p>
+            <div className="text-5xl font-bold bg-gradient-to-r from-secondary to-green-600 bg-clip-text text-transparent mb-3 flex items-center justify-center">
+              <span className="mr-2">↓</span>60%
+            </div>
+            <p className="text-gray-600 font-medium">Coût par lead</p>
           </motion.div>
           <motion.div 
             className="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-2xl shadow-xl border border-yellow-100"
