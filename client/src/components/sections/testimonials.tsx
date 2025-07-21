@@ -52,25 +52,17 @@ export default function Testimonials() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <RevealText
-            text="Ce que disent nos clients"
-            className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-            delay={0.2}
-            duration={1.5}
-          />
-          <ScrollAnimation animation="elastic" delay={1}>
-            <p className="text-xl text-gray-600">
-              Leur succès parle pour nous
-            </p>
-          </ScrollAnimation>
+          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Ce que disent nos clients
+          </h2>
+          <p className="text-xl text-gray-600">
+            Leur succès parle pour nous
+          </p>
         </div>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.25}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <PerspectiveCard 
-              key={index}
-              className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg glow-effect transform transition-all duration-300 hover:shadow-2xl"
-            >
+            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg transform transition-all duration-300 hover:shadow-2xl">
               <motion.div 
                 className="flex items-center mb-4"
                 initial={{ opacity: 0, x: -20 }}
@@ -127,9 +119,9 @@ export default function Testimonials() {
                   <div className="text-gray-600 text-sm">{testimonial.role}</div>
                 </div>
               </motion.div>
-            </PerspectiveCard>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );

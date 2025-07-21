@@ -11,15 +11,17 @@ Preferred communication style: Simple, everyday language.
 ## Recent Changes
 
 ### January 21, 2025
-- Added advanced ScrollTrigger animations and creative scroll effects throughout the website:
-  - Enhanced ScrollAnimations.tsx with 9 new animation types: revealUp, morphIn, slideRotate, elastic, typewriter, magneticReveal, liquidDrop, prismShift
-  - Created ScrollTriggerEffects.tsx with professional components: ParallaxScroll, RevealText, MagneticElement, AnimatedCounter, Rotating3DCard, ElasticEntrance, TypewriterText, FloatingElements, PerspectiveCard
-  - Updated hero section with morphing gradient background, floating elements, magnetic buttons, and 3D perspective image
-  - Enhanced services section with 3D rotating cards, elastic entrances, and magnetic elements
-  - Improved methodology section with text reveal animations and sliding text effects  
-  - Upgraded testimonials with perspective cards, parallax backgrounds, and enhanced floating elements
-  - Added custom CSS animations for 3D effects, liquid morphing, glow effects, and enhanced hover states
-  - Implemented smooth scrolling and professional cubic-bezier easing curves throughout
+- **Performance Optimization & Payment Integration:**
+  - Removed heavy ScrollTrigger animations and 3D effects to improve site performance
+  - Eliminated problematic hover effects on images and interactive animations on 3D cards
+  - Simplified hero section by removing magnetic button wrappers that caused DOM nesting warnings
+  - Replaced complex animations with clean, simple designs for better user experience
+  - **Integrated Stripe payment buttons:**
+    - RaiseMédia PRO subscription → https://buy.stripe.com/dR67urecxcHLdLW00g
+    - RaiseMédia Gold subscription → https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k
+    - Quote button → WhatsApp contact: https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile
+  - Converted methodology, services, and testimonials sections to use simple HTML elements instead of animated components
+  - Maintained visual appeal while prioritizing fast loading times and smooth scrolling
 - Fixed white-on-white button visibility issues across multiple pages
 - Corrected header navigation to properly redirect to homepage sections instead of creating duplicate pages
 - Removed opacity from client logos in trust indicators section for better visibility

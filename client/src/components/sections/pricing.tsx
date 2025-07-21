@@ -206,9 +206,38 @@ export default function Pricing() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
                   >
-                    <Button className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}>
-                      {plan.buttonText}
-                    </Button>
+                    {plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMédia PRO" ? (
+                      <Button 
+                        asChild 
+                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
+                      >
+                        <a href="https://buy.stripe.com/dR67urecxcHLdLW00g" target="_blank" rel="noopener noreferrer">
+                          {plan.buttonText}
+                        </a>
+                      </Button>
+                    ) : plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMédia Gold" ? (
+                      <Button 
+                        asChild 
+                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
+                      >
+                        <a href="https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k" target="_blank" rel="noopener noreferrer">
+                          {plan.buttonText}
+                        </a>
+                      </Button>
+                    ) : plan.buttonText === "DEMANDER UN DEVIS" ? (
+                      <Button 
+                        asChild 
+                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
+                      >
+                        <a href="https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile" target="_blank" rel="noopener noreferrer">
+                          {plan.buttonText}
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}>
+                        {plan.buttonText}
+                      </Button>
+                    )}
                   </motion.div>
                 </div>
 

@@ -36,17 +36,12 @@ export default function Methodology() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <RevealText
-            text="Comment l'inbound marketing révolutionne votre acquisition"
-            className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
-            delay={0}
-            duration={1.5}
-          />
-          <SlidingTextReveal
-            text="Notre méthodologie éprouvée transforme les visiteurs en ambassadeurs de votre marque"
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
-            direction="up"
-          />
+          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Comment l'inbound marketing révolutionne votre acquisition
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Notre méthodologie éprouvée transforme les visiteurs en ambassadeurs de votre marque
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
@@ -68,42 +63,24 @@ export default function Methodology() {
                 { num: 3, color: 'bg-accent', title: 'CONCLURE (en harmonie)', desc: 'Guidez vos prospects vers l\'achat grâce à un nurturing personnalisé et intelligent.' },
                 { num: 4, color: 'bg-purple-600', title: 'ENCHANTER (pour fidéliser)', desc: 'Transformez vos clients en ambassadeurs qui recommandent activement vos services.' }
               ].map((step, index) => (
-                <motion.div 
+                <div 
                   key={step.num}
                   className="flex items-start space-x-4"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <motion.div 
+                  <div 
                     className={`w-8 h-8 ${step.color} text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold`}
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
                   >
                     {step.num}
-                  </motion.div>
-                  <div>
-                    <motion.h4 
-                      className="font-semibold text-dark mb-2"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                    >
-                      {step.title}
-                    </motion.h4>
-                    <motion.p 
-                      className="text-gray-600"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    >
-                      {step.desc}
-                    </motion.p>
                   </div>
-                </motion.div>
+                  <div>
+                    <h4 className="font-semibold text-dark mb-2">
+                      {step.title}
+                    </h4>
+                    <p className="text-gray-600">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

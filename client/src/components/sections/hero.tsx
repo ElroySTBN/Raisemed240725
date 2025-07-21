@@ -51,43 +51,27 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.5, delay: 1.8, ease: [0.6, -0.05, 0.01, 0.99] }}
               >
-                <MagneticElement strength={20}>
-                  <button 
-                    onClick={() => {
-                      const element = document.getElementById('pricing');
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
+                <button 
+                  onClick={() => {
+                    const element = document.getElementById('pricing');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <Rocket className="mr-2 h-5 w-5" />
+                    Démarrer maintenant
+                  </Button>
+                </button>
+                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                   >
-                    <motion.div
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-block"
-                    >
-                      <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 glow-effect-accent">
-                        <Rocket className="mr-2 h-5 w-5" />
-                        Démarrer maintenant
-                      </Button>
-                    </motion.div>
-                  </button>
-                </MagneticElement>
-                <MagneticElement strength={15}>
-                  <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
-                    <motion.div
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="inline-block"
-                    >
-                      <Button 
-                        className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 glow-effect"
-                      >
-                        <Play className="mr-2 h-5 w-5" />
-                        Obtenir un Audit GRATUIT
-                      </Button>
-                    </motion.div>
-                  </a>
-                </MagneticElement>
+                    <Play className="mr-2 h-5 w-5" />
+                    Obtenir un Audit GRATUIT
+                  </Button>
+                </a>
               </motion.div>
             </motion.div>
             
