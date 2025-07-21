@@ -3,6 +3,10 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { User, ArrowRight, TrendingUp, Users, DollarSign, Stethoscope, Home, Eye } from "lucide-react";
 import { Link } from "wouter";
+import { motion } from "framer-motion";
+import { HoverEffect } from "@/components/animations/HoverEffects";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimations";
+import { AnimatedCounter } from "@/components/animations/AnimatedCounter";
 
 export default function CaseStudiesPage() {
   return (
@@ -10,15 +14,52 @@ export default function CaseStudiesPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-20">
+        <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-20 relative overflow-hidden">
+          {/* Animated background elements */}
+          <motion.div
+            className="absolute top-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 left-20 w-24 h-24 bg-accent/20 rounded-full blur-2xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              x: [-10, 10, -10],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1
+            }}
+          />
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              <motion.h1 
+                className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
                 Nos Cas Clients
-              </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              </motion.h1>
+              <motion.p 
+                className="text-xl text-blue-100 max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
                 Découvrez comment nous avons transformé la croissance de nos clients grâce à l'inbound marketing
-              </p>
+              </motion.p>
             </div>
           </div>
         </section>

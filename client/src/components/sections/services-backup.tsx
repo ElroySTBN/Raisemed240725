@@ -16,19 +16,14 @@ export default function Services() {
         <div className="text-center mb-20">
           <motion.h2 
             className="text-4xl lg:text-6xl font-bold text-dark mb-8 bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            data-aos="fade-up"
           >
             Notre approche inbound marketing révolutionnaire
           </motion.h2>
           <motion.p 
             className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            data-aos="fade-up" 
+            data-aos-delay="200"
           >
             Découvrez comment l'inbound marketing peut transformer votre entreprise locale en aimant à prospects qualifiés
           </motion.p>
@@ -92,21 +87,10 @@ export default function Services() {
                 ease: "easeInOut"
               }}
             />
-            <motion.div 
-              className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8"
-              animate={{
-                y: [5, -5, 5],
-                rotate: [0, -2, 2, 0],
-              }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1
-              }}
-            >
+
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '2s' }}>
               <Shield className="h-8 w-8" />
-            </motion.div>
+            </div>
             <h3 className="text-2xl font-bold mb-6">E-réputation</h3>
             <p className="text-green-100 mb-8 text-lg leading-relaxed">
               Gérez et améliorez votre réputation en ligne pour renforcer la confiance et attirer plus de clients locaux.
@@ -116,41 +100,18 @@ export default function Services() {
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Monitoring de réputation</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Stratégie de réponse</li>
             </ul>
-          </HoverEffect>
+          </motion.div>
 
-          <HoverEffect 
-            effect="lift"
-            className="bg-gradient-to-br from-accent to-orange-600 text-white p-10 rounded-3xl shadow-2xl border border-orange-600/20 relative overflow-hidden"
+          <motion.div 
+            className="bg-gradient-to-br from-accent to-orange-600 text-white p-10 rounded-3xl shadow-2xl border border-orange-600/20"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            data-aos="fade-up"
+            data-aos-delay="700"
           >
-            <motion.div
-              className="absolute top-1/2 right-0 w-20 h-20 bg-white/10 rounded-full blur-xl"
-              animate={{
-                scale: [1, 1.1, 1],
-                y: [-10, 10, -10],
-              }}
-              transition={{
-                duration: 4.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2
-              }}
-            />
-            <motion.div 
-              className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8"
-              animate={{
-                y: [-3, 3, -3],
-                rotate: [0, 3, -3, 0],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 2
-              }}
-            >
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '4s' }}>
               <TrendingUp className="h-8 w-8" />
-            </motion.div>
+            </div>
             <h3 className="text-2xl font-bold mb-6">Résultats Data-Driven</h3>
             <p className="text-orange-100 mb-8 text-lg leading-relaxed">
               Chaque action est mesurée et optimisée grâce à nos rapports mensuels et veille concurrentielle continue.
@@ -160,8 +121,8 @@ export default function Services() {
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />ROI transparent</li>
               <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Veille concurrentielle</li>
             </ul>
-          </HoverEffect>
-        </StaggerContainer>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

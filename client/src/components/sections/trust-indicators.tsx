@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { HoverEffect } from "@/components/animations/HoverEffects";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimations";
+import { AnimatedCounter } from "@/components/animations/AnimatedCounter";
 
 export default function TrustIndicators() {
   return (

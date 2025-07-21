@@ -11,10 +11,13 @@ import Testimonials from "@/components/sections/testimonials";
 import Blog from "@/components/sections/blog";
 import CTA from "@/components/sections/cta";
 import Contact from "@/components/sections/contact";
+import { AnimatedBackground, ScrollProgress } from "@/components/animations/AnimatedBackground";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <AnimatedBackground />
+      <ScrollProgress />
       <Header />
       <main>
         <Hero />

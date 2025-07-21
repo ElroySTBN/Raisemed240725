@@ -1,17 +1,59 @@
 import { Check, X, Megaphone } from "lucide-react";
+import { motion } from "framer-motion";
+import { HoverEffect } from "@/components/animations/HoverEffects";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimations";
 
 export default function Methodology() {
   return (
-    <section id="methodologie" className="bg-gray-50 py-20">
+    <section id="methodologie" className="bg-gray-50 py-20 relative overflow-hidden">
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.6, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-0 left-0 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"
+        animate={{
+          scale: [1, 1.1, 1],
+          x: [-20, 20, -20],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2
+        }}
+      />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-6">
+        <ScrollAnimation animation="fadeIn" className="text-center mb-16">
+          <motion.h2 
+            className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             Comment l'inbound marketing révolutionne votre acquisition
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Notre méthodologie éprouvée transforme les visiteurs en ambassadeurs de votre marque
-          </p>
-        </div>
+          </motion.p>
+        </ScrollAnimation>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
@@ -26,34 +68,49 @@ export default function Methodology() {
               L'inbound marketing : une révolution par rapport aux méthodes traditionnelles
             </h3>
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
-                <div>
-                  <h4 className="font-semibold text-dark mb-2">ATTIRER (au lieu de déranger)</h4>
-                  <p className="text-gray-600">Créez du contenu qui répond aux besoins de vos prospects plutôt que de les interrompre.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
-                <div>
-                  <h4 className="font-semibold text-dark mb-2">CONVERTIR (avec confiance)</h4>
-                  <p className="text-gray-600">Transformez vos visiteurs en prospects grâce à des offres de valeur et du contenu expert.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-accent text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
-                <div>
-                  <h4 className="font-semibold text-dark mb-2">CONCLURE (en harmonie)</h4>
-                  <p className="text-gray-600">Guidez vos prospects vers l'achat grâce à un nurturing personnalisé et intelligent.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">4</div>
-                <div>
-                  <h4 className="font-semibold text-dark mb-2">ENCHANTER (pour fidéliser)</h4>
-                  <p className="text-gray-600">Transformez vos clients en ambassadeurs qui recommandent activement vos services.</p>
-                </div>
-              </div>
+              {[
+                { num: 1, color: 'bg-primary', title: 'ATTIRER (au lieu de déranger)', desc: 'Créez du contenu qui répond aux besoins de vos prospects plutôt que de les interrompre.' },
+                { num: 2, color: 'bg-secondary', title: 'CONVERTIR (avec confiance)', desc: 'Transformez vos visiteurs en prospects grâce à des offres de valeur et du contenu expert.' },
+                { num: 3, color: 'bg-accent', title: 'CONCLURE (en harmonie)', desc: 'Guidez vos prospects vers l\'achat grâce à un nurturing personnalisé et intelligent.' },
+                { num: 4, color: 'bg-purple-600', title: 'ENCHANTER (pour fidéliser)', desc: 'Transformez vos clients en ambassadeurs qui recommandent activement vos services.' }
+              ].map((step, index) => (
+                <motion.div 
+                  key={step.num}
+                  className="flex items-start space-x-4"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                >
+                  <motion.div 
+                    className={`w-8 h-8 ${step.color} text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold`}
+                    whileHover={{ scale: 1.2, rotate: 360 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    {step.num}
+                  </motion.div>
+                  <div>
+                    <motion.h4 
+                      className="font-semibold text-dark mb-2"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
+                    >
+                      {step.title}
+                    </motion.h4>
+                    <motion.p 
+                      className="text-gray-600"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                    >
+                      {step.desc}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
