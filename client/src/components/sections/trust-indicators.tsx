@@ -3,12 +3,12 @@ export default function TrustIndicators() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-gray-600 font-medium mb-8">Ils nous font confiance</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
+          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-8">Ils nous font confiance</h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
             <div className="text-center">
               <div className="bg-white p-4 rounded-lg shadow-sm flex items-center justify-center h-16">
                 <img 
-                  src="/assets/Logo Pharma MC - SBG_1753043771294.png" 
+                  src="/assets/Logo%20Pharma%20MC%20-%20SBG_1753043771294.png" 
                   alt="Pharmacie Bergère" 
                   className="max-h-12 max-w-full object-contain"
                 />

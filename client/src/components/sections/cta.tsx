@@ -43,8 +43,7 @@ export default function CTA() {
           </a>
           <a href="tel:0782492124">
             <Button 
-              variant="outline"
-              className="border-2 border-white text-primary bg-white px-8 py-4 hover:bg-gray-100"
+              className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 text-lg hover:bg-white hover:text-primary"
             >
               <Phone className="mr-2 h-5 w-5" />
               Appelez-nous : 07 82 49 21 24

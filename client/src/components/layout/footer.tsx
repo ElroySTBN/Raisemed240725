@@ -58,9 +58,9 @@ export default function Footer() {
               © 2024 RaiseMed.IA. Tous droits réservés.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Mentions légales</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Politique de confidentialité</a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">CGU</a>
+              <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Mentions légales</a>
+              <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">Politique de confidentialité</a>
+              <a href="#" className="text-gray-400 hover:text-blue-400 text-sm transition-colors">CGU</a>
             </div>
           </div>
         </div>
