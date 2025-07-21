@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { User, ArrowRight, TrendingUp, Users, DollarSign } from "lucide-react";
+import { User, ArrowRight, TrendingUp, Users, DollarSign, Stethoscope } from "lucide-react";
 import { Link } from "wouter";
 
 export default function CaseStudiesPage() {
@@ -32,8 +32,8 @@ export default function CaseStudiesPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="order-2 lg:order-1">
                   <div className="flex items-center mb-6">
-                    <div className="w-20 h-20 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-2xl mr-6">
-                      CM
+                    <div className="w-20 h-20 bg-primary text-white rounded-xl flex items-center justify-center mr-6">
+                      <Stethoscope className="w-10 h-10" />
                     </div>
                     <div>
                       <h2 className="text-3xl font-bold text-dark">Cabinet Médical - Cas Client #1</h2>
