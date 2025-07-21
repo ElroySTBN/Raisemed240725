@@ -49,7 +49,14 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.9 }}
             >
-              <Link href="/offres">
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('pricing');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -60,7 +67,7 @@ export default function Hero() {
                     Démarrer maintenant
                   </Button>
                 </motion.div>
-              </Link>
+              </button>
               <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}

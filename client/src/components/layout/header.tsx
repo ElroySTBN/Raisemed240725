@@ -55,6 +55,12 @@ export default function Header() {
                   Services
                 </button>
                 <button 
+                  onClick={() => scrollToSection("pricing")}
+                  className="text-gray-700 hover:text-primary transition-colors"
+                >
+                  Tarification
+                </button>
+                <button 
                   onClick={() => scrollToSection("methodologie")}
                   className="text-gray-700 hover:text-primary transition-colors"
                 >
