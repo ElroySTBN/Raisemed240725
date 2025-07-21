@@ -10,6 +10,9 @@ import CaseStudyDetail from "@/pages/case-study-detail";
 import BlogPage from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import NotFound from "@/pages/not-found";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Router() {
   return (
@@ -26,6 +29,16 @@ function Router() {
 }
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+      delay: 100,
+    });
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

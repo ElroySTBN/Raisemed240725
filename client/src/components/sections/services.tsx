@@ -1,63 +1,95 @@
 import { Magnet, Bot, TrendingUp, Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-6">
+    <section id="services" className="bg-gradient-to-b from-gray-50 to-white py-24 relative overflow-hidden">
+      {/* Premium background elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-accent/20 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-20">
+          <motion.h2 
+            className="text-4xl lg:text-6xl font-bold text-dark mb-8 bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent"
+            data-aos="fade-up"
+          >
             Notre approche inbound marketing révolutionnaire
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
             Découvrez comment l'inbound marketing peut transformer votre entreprise locale en aimant à prospects qualifiés
-          </p>
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-primary to-blue-700 text-white p-8 rounded-xl">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-6">
-              <Magnet className="h-6 w-6" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="400">
+          <motion.div 
+            className="bg-gradient-to-br from-primary to-blue-700 text-white p-10 rounded-3xl shadow-2xl border border-blue-600/20"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ duration: 0.3 }}
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float">
+              <Magnet className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Attraction Intelligence</h3>
-            <p className="text-blue-100 mb-6">
+            <h3 className="text-2xl font-bold mb-6">Attraction Intelligence</h3>
+            <p className="text-blue-100 mb-8 text-lg leading-relaxed">
               Attirez naturellement vos prospects idéaux grâce à du contenu personnalisé et une optimisation SEO locale poussée.
             </p>
-            <ul className="space-y-2 text-sm text-blue-100">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />SEO local optimisé</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Contenu expert métier</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Stratégie réseaux sociaux</li>
+            <ul className="space-y-3 text-blue-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />SEO local optimisé</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Contenu expert métier</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Stratégie réseaux sociaux</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="bg-gradient-to-br from-secondary to-green-700 text-white p-8 rounded-xl">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-6">
-              <Bot className="h-6 w-6" />
+          <motion.div 
+            className="bg-gradient-to-br from-secondary to-green-700 text-white p-10 rounded-3xl shadow-2xl border border-green-600/20"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '2s' }}>
+              <Bot className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-bold mb-4">IA & Automation</h3>
-            <p className="text-green-100 mb-6">
+            <h3 className="text-2xl font-bold mb-6">IA & Automation</h3>
+            <p className="text-green-100 mb-8 text-lg leading-relaxed">
               Nos outils d'intelligence artificielle qualifient et nurturent vos prospects automatiquement 24h/24.
             </p>
-            <ul className="space-y-2 text-sm text-green-100">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Lead scoring automatique</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Chatbots intelligents</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Email marketing personnalisé</li>
+            <ul className="space-y-3 text-green-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Lead scoring automatique</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Chatbots intelligents</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Email marketing personnalisé</li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="bg-gradient-to-br from-accent to-orange-600 text-white p-8 rounded-xl">
-            <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mb-6">
-              <TrendingUp className="h-6 w-6" />
+          <motion.div 
+            className="bg-gradient-to-br from-accent to-orange-600 text-white p-10 rounded-3xl shadow-2xl border border-orange-600/20"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            data-aos="fade-up"
+            data-aos-delay="700"
+          >
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float" style={{ animationDelay: '4s' }}>
+              <TrendingUp className="h-8 w-8" />
             </div>
-            <h3 className="text-xl font-bold mb-4">Data-Driven Results</h3>
-            <p className="text-orange-100 mb-6">
+            <h3 className="text-2xl font-bold mb-6">Data-Driven Results</h3>
+            <p className="text-orange-100 mb-8 text-lg leading-relaxed">
               Chaque action est mesurée et optimisée grâce à nos tableaux de bord en temps réel.
             </p>
-            <ul className="space-y-2 text-sm text-orange-100">
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />KPIs personnalisés</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />ROI transparent</li>
-              <li className="flex items-center"><Check className="mr-2 h-4 w-4" />Optimisation continue</li>
+            <ul className="space-y-3 text-orange-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />KPIs personnalisés</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />ROI transparent</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-accent" />Optimisation continue</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
