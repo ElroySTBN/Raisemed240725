@@ -36,8 +36,8 @@ export default function CaseStudiesPage() {
                       <Stethoscope className="w-10 h-10" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical - Cas Client #1</h2>
-                      <p className="text-gray-600 text-lg">Médecin généraliste • Région Rhône-Alpes</p>
+                      <h2 className="text-3xl font-bold text-dark">Cabinet Médical Dubois</h2>
+                      <p className="text-gray-600 text-lg">Médecin généraliste, Lyon</p>
                     </div>
                   </div>
                   
@@ -86,21 +86,21 @@ export default function CaseStudiesPage() {
                     <Users className="w-8 h-8" />
                   </div>
                   <div className="text-4xl font-bold text-primary mb-2">+420%</div>
-                  <div className="text-gray-600">Nouveaux patients en 6 mois</div>
+                  <div className="text-gray-600">Nouveaux patients</div>
                 </div>
                 <div className="bg-white rounded-xl p-8 shadow-lg text-center border-l-4 border-secondary">
                   <div className="w-16 h-16 bg-secondary text-white rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="w-8 h-8" />
                   </div>
                   <div className="text-4xl font-bold text-secondary mb-2">+250%</div>
-                  <div className="text-gray-600">Visibilité sur Google</div>
+                  <div className="text-gray-600">Visibilité locale</div>
                 </div>
                 <div className="bg-white rounded-xl p-8 shadow-lg text-center border-l-4 border-accent">
                   <div className="w-16 h-16 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4">
                     <DollarSign className="w-8 h-8" />
                   </div>
                   <div className="text-4xl font-bold text-accent mb-2">-60%</div>
-                  <div className="text-gray-600">Coût d'acquisition par patient</div>
+                  <div className="text-gray-600">Coût par patient</div>
                 </div>
               </div>
               
@@ -112,7 +112,7 @@ export default function CaseStudiesPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <User className="mr-3 w-5 h-5 text-gray-600" />
-                    <span className="font-semibold text-dark">Dr. M.D., Médecin généraliste</span>
+                    <span className="font-semibold text-dark">Dr. Marie Dubois, Médecin généraliste</span>
                   </div>
                   <Link href="/cas-clients/1">
                     <Button 
@@ -144,8 +144,8 @@ export default function CaseStudiesPage() {
                       <Home className="w-10 h-10" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière - Cas Client #2</h2>
-                      <p className="text-gray-600 text-lg">Immobilier résidentiel • Région PACA</p>
+                      <h2 className="text-3xl font-bold text-dark">Agence Immobilière Horizon</h2>
+                      <p className="text-gray-600 text-lg">Immobilier résidentiel, Marseille</p>
                     </div>
                   </div>
                   
@@ -199,7 +199,7 @@ export default function CaseStudiesPage() {
                     <DollarSign className="w-8 h-8" />
                   </div>
                   <div className="text-4xl font-bold text-accent mb-2">15 jours</div>
-                  <div className="text-gray-600">Délai moyen de vente</div>
+                  <div className="text-gray-600">Délai moyen vente</div>
                 </div>
               </div>
               
@@ -211,7 +211,7 @@ export default function CaseStudiesPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <User className="mr-3 w-5 h-5 text-gray-600" />
-                    <span className="font-semibold text-dark">J.-P. M., Directeur Agence</span>
+                    <span className="font-semibold text-dark">Jean-Pierre Martin, Directeur Agence</span>
                   </div>
                   <Link href="/cas-clients/2">
                     <Button 
