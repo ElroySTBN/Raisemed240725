@@ -37,15 +37,15 @@ export default function Hero() {
               {/* Main heading */}
               <div className="space-y-4 animate-fade-in-up delay-200">
                 <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                  <span className="text-slate-900">Transformez votre</span>
+                  <span className="text-slate-900">Rendez votre</span>
                   <br />
-                  <span className="text-gradient">expertise</span>
+                  <span className="text-gradient">savoir-faire</span>
                   <br />
-                  <span className="text-slate-900">en croissance</span>
+                  <span className="text-slate-900">accessible à ceux qui en ont le plus besoin !</span>
                 </h1>
                 <p className="text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-2xl">
                   Solutions inbound marketing sur mesure pour entreprises locales. 
-                  Générez des leads qualifiés avec l'intelligence artificielle.
+                  Générez des leads qualifiés grace a nos stratégies data driven.
                 </p>
               </div>
 
@@ -82,20 +82,19 @@ export default function Hero() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-500">
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('pricing');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="btn-premium group"
+                <a 
+                  href="https://api.whatsapp.com/send/?phone=33782492124&text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27un%20de%20vos%20services.%20Pourrais-je%20avoir%20plus%20d%27informations%20s%27il%20vous%20pla%C3%AEt%20%3F&type=phone_number&app_absent=0" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
                 >
-                  <span className="relative z-10 flex items-center">
-                    Démarrer maintenant
-                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </button>
+                  <button className="btn-premium group">
+                    <span className="relative z-10 flex items-center">
+                      Démarrer maintenant
+                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </button>
+                </a>
 
                 <a 
                   href="https://tally.so/r/wvbMdQ" 
@@ -112,16 +111,7 @@ export default function Hero() {
                 </a>
               </div>
 
-              {/* Trust indicators */}
-              <div className="pt-8 animate-fade-in-up delay-700">
-                <p className="text-sm text-slate-500 mb-4">Plus de 100 entreprises nous font confiance</p>
-                <div className="flex items-center space-x-8 opacity-60">
-                  <img src="/assets/Logo Pharma MC - SBG_1753043771294.png" alt="Pharma MC" className="h-8 grayscale hover:grayscale-0 transition-all duration-300" />
-                  <div className="text-lg font-semibold text-slate-400">Century 21</div>
-                  <div className="text-lg font-semibold text-slate-400">Optic 2000</div>
-                  <div className="text-lg font-semibold text-slate-400">Supra Sécurité</div>
-                </div>
-              </div>
+
             </div>
 
             {/* Right column - Visual */}

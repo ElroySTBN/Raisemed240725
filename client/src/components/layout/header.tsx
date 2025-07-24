@@ -47,7 +47,7 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-lg shadow-premium border-b border-slate-200/50' 
-          : 'bg-transparent'
+          : 'bg-white/95 backdrop-blur-lg shadow-premium border-b border-slate-200/50'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,9 +79,7 @@ export default function Header() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 ${
-                    isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200 hover:bg-white/10'
-                  } animate-fade-in-up delay-${index * 100}`}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 text-slate-700 hover:text-blue-600 animate-fade-in-up delay-${index * 100}`}
                 >
                   {item.label}
                 </a>
@@ -89,9 +87,7 @@ export default function Header() {
                 <button
                   key={item.label}
                   onClick={item.action}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 ${
-                    isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200 hover:bg-white/10'
-                  } animate-fade-in-up delay-${index * 100}`}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 text-slate-700 hover:text-blue-600 animate-fade-in-up delay-${index * 100}`}
                 >
                   {item.label}
                 </button>
