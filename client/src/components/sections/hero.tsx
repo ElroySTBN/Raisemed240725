@@ -139,7 +139,7 @@ export default function Hero() {
                   <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-glow p-4 animate-float delay-1000">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-semibold text-slate-700">Conversion</span>
+                      <span className="text-sm font-semibold text-slate-700">Solutions Multicanales</span>
                     </div>
                     <p className="text-2xl font-bold text-blue-600 mt-1">87%</p>
                   </div>
