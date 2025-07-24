@@ -59,16 +59,11 @@ export default function Header() {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="flex items-center space-x-3 group"
             >
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-glow group-hover:shadow-lg transition-all duration-300">
-                  <Sparkles className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-2xl font-bold text-gradient">RaiseMed.IA</span>
-                <p className="text-xs text-slate-600 mt-1">Marketing Intelligence</p>
-              </div>
+              <img 
+                src="/assets/raisemed-logo.png" 
+                alt="RaiseMed.IA" 
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
+              />
             </a>
           </div>
 
