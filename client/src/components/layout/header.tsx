@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 
+import Raisemed_IA_10 from "@assets/Raisemed.IA_10.png";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,7 +62,7 @@ export default function Header() {
               className="flex items-center space-x-3 group"
             >
               <img 
-                src="/assets/raisemed-logo.png" 
+                src={Raisemed_IA_10} 
                 alt="RaiseMed.IA" 
                 className="h-10 w-auto transition-all duration-300 group-hover:scale-105"
               />
