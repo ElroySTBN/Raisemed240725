@@ -72,7 +72,7 @@ export default function Hero() {
                     <Zap className="w-5 h-5 text-purple-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-slate-900">95%</p>
+                    <p className="text-2xl font-bold text-slate-900">-60%</p>
                     <p className="text-sm text-slate-600">clients satisfaits</p>
                   </div>
                 </div>
