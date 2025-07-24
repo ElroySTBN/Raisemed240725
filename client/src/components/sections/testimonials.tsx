@@ -1,8 +1,4 @@
 import { Star } from "lucide-react";
-import { motion } from "framer-motion";
-import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation, StaggerContainer, RevealText, ParallaxScroll, MagneticElement } from "@/components/animations/ScrollAnimations";
-import { ElasticEntrance, PerspectiveCard, FloatingElements } from "@/components/animations/ScrollTriggerEffects";
 
 export default function Testimonials() {
   const testimonials = [
@@ -30,29 +26,14 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-white py-20 relative overflow-hidden">
-      {/* Enhanced floating elements */}
-      <FloatingElements />
-      
-      <ParallaxScroll speed={0.2} className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.7, 0.3],
-            rotate: [0, 180, 360]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </ParallaxScroll>
+    <section className="bg-white section-padding relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-blue-600/20 rounded-full blur-2xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-blue-600/20 to-emerald-500/20 rounded-full blur-2xl animate-float animation-delay-1000"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-dark mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 gradient-text">
             Ce que disent nos clients
           </h2>
           <p className="text-xl text-gray-600">
@@ -62,63 +43,34 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg transform transition-all duration-300 hover:shadow-2xl">
-              <motion.div 
-                className="flex items-center mb-4"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className="flex text-accent">
+            <div 
+              key={index}
+              className={`bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg card-hover animate-fade-in-up`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400 mb-2">
                   {[...Array(testimonial.stars)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ 
-                        duration: 0.3, 
-                        delay: index * 0.1 + i * 0.1,
-                        type: 'spring',
-                        stiffness: 300
-                      }}
-                    >
-                      <Star className="w-5 h-5 fill-current" />
-                    </motion.div>
+                    <Star key={i} className="h-5 w-5 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
               
-              <motion.blockquote 
-                className="text-gray-700 mb-6 text-lg leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 + 0.2 }}
-              >
+              <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                 "{testimonial.text}"
-              </motion.blockquote>
+              </p>
               
-              <motion.div 
-                className="flex items-center"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 + 0.4 }}
-              >
-                <motion.img 
-                  src={testimonial.avatar}
-                  alt={`Portrait professionnel de ${testimonial.author}`}
-                  className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-primary/20" 
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+              <div className="flex items-center">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.author}
+                  className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-gray-100"
                 />
                 <div>
-                  <div className="font-semibold text-dark">{testimonial.author}</div>
-                  <div className="text-gray-600 text-sm">{testimonial.role}</div>
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           ))}
         </div>

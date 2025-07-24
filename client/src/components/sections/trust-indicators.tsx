@@ -1,127 +1,83 @@
-import { motion } from "framer-motion";
-import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation } from "@/components/animations/ScrollAnimations";
-import { AnimatedCounter } from "@/components/animations/AnimatedCounter";
-
 export default function TrustIndicators() {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-white to-gray-50 section-padding relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-50/30 to-transparent"></div>
-      <div className="absolute -top-16 -right-16 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute -top-16 -right-16 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl lg:text-5xl font-bold text-dark mb-4 bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent"
-            data-aos="fade-up"
-          >
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 gradient-text">
             Ils nous font confiance
-          </motion.h2>
-          <motion.p
-            className="text-xl text-gray-600 max-w-2xl mx-auto mb-12"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12">
             Rejoignez plus de 50+ entreprises partenaires qui ont transformé leur croissance avec nos stratégies inbound
-          </motion.p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center" data-aos="fade-up" data-aos-delay="400">
-            <motion.div 
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center h-20 border border-gray-100 transition-all duration-300">
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+            <div className="text-center animate-fade-in-up animation-delay-100">
+              <div className="bg-white p-6 rounded-2xl shadow-lg card-hover flex items-center justify-center h-20 border border-gray-100">
                 <img 
                   src="/assets/Logo%20Pharma%20MC%20-%20SBG_1753043771294.png" 
                   alt="Pharmacie Bergère" 
                   className="max-h-14 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-            </motion.div>
-            <motion.div 
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center h-20 border border-gray-100 transition-all duration-300">
+            </div>
+            <div className="text-center animate-fade-in-up animation-delay-200">
+              <div className="bg-white p-6 rounded-2xl shadow-lg card-hover flex items-center justify-center h-20 border border-gray-100">
                 <img 
                   src="/assets/image_1753043820433.png" 
                   alt="Century 21" 
                   className="max-h-14 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-            </motion.div>
-            <motion.div 
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center h-20 border border-gray-100 transition-all duration-300">
+            </div>
+            <div className="text-center animate-fade-in-up animation-delay-300">
+              <div className="bg-white p-6 rounded-2xl shadow-lg card-hover flex items-center justify-center h-20 border border-gray-100">
                 <img 
                   src="/assets/image_1753043825883.png" 
                   alt="Supra Sécurité" 
                   className="max-h-14 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-            </motion.div>
-            <motion.div 
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center h-20 border border-gray-100 transition-all duration-300">
+            </div>
+            <div className="text-center animate-fade-in-up animation-delay-500">
+              <div className="bg-white p-6 rounded-2xl shadow-lg card-hover flex items-center justify-center h-20 border border-gray-100">
                 <img 
                   src="/assets/image_1753043831484.png" 
                   alt="La Vaux Immobilier" 
                   className="max-h-14 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-            </motion.div>
-            <motion.div 
-              className="text-center"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl flex items-center justify-center h-20 border border-gray-100 transition-all duration-300">
+            </div>
+            <div className="text-center animate-fade-in-up animation-delay-700">
+              <div className="bg-white p-6 rounded-2xl shadow-lg card-hover flex items-center justify-center h-20 border border-gray-100">
                 <img 
                   src="/assets/image_1753043896859.png" 
                   alt="Optic 2000" 
                   className="max-h-14 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" data-aos="fade-up" data-aos-delay="600">
-          <motion.div 
-            className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border border-blue-100"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="text-5xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent mb-3">+500k€</div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-xl border border-blue-100 card-hover animate-scale-in animation-delay-100">
+            <div className="text-5xl font-bold gradient-text mb-3">+500k€</div>
             <p className="text-gray-600 font-medium">Générés pour nos clients</p>
-          </motion.div>
-          <motion.div 
-            className="bg-gradient-to-br from-white to-green-50 p-8 rounded-2xl shadow-xl border border-green-100"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ duration: 0.3, delay: 0.1 }}
-          >
-            <div className="text-5xl font-bold bg-gradient-to-r from-secondary to-green-600 bg-clip-text text-transparent mb-3 flex items-center justify-center">
+          </div>
+          <div className="bg-gradient-to-br from-white to-emerald-50 p-8 rounded-2xl shadow-xl border border-emerald-100 card-hover animate-scale-in animation-delay-300">
+            <div className="text-5xl font-bold gradient-text mb-3 flex items-center justify-center">
               <span className="mr-2">↓</span>60%
             </div>
             <p className="text-gray-600 font-medium">Coût par lead</p>
-          </motion.div>
-          <motion.div 
-            className="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-2xl shadow-xl border border-yellow-100"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <div className="text-5xl font-bold bg-gradient-to-r from-accent to-yellow-600 bg-clip-text text-transparent mb-3">4</div>
+          </div>
+          <div className="bg-gradient-to-br from-white to-yellow-50 p-8 rounded-2xl shadow-xl border border-yellow-100 card-hover animate-scale-in animation-delay-500">
+            <div className="text-5xl font-bold gradient-text mb-3">4</div>
             <p className="text-gray-600 font-medium">Pays desservis</p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

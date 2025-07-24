@@ -1,23 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { Check, Star, Gift, CreditCard, Phone } from "lucide-react";
-import { motion } from "framer-motion";
-import { HoverEffect } from "@/components/animations/HoverEffects";
-import { ScrollAnimation, StaggerContainer, RevealText, MagneticElement } from "@/components/animations/ScrollAnimations";
-import { ElasticEntrance, PerspectiveCard, TypewriterText } from "@/components/animations/ScrollTriggerEffects";
+import { Check, Star, Gift } from "lucide-react";
 
 export default function Pricing() {
   const plans = [
     {
-      name: "",
-      subtitle: "RaiseMed.IA Pro",
+      name: "RaiseMed.IA Pro",
       price: "150",
       unit: "€/mois",
       setupFee: "450€ installation",
       commitment: "Sans engagement",
       popular: false,
-      color: "bg-gray-600",
       buttonText: "CHOISIR CETTE OFFRE",
       buttonColor: "bg-gray-600 hover:bg-gray-700",
+      stripeUrl: "https://buy.stripe.com/dR67urecxcHLdLW00g",
       features: [
         "Audit stratégique de votre visibilité en ligne",
         "Veille concurrentielle locale",
@@ -31,8 +26,7 @@ export default function Pricing() {
       ]
     },
     {
-      name: "",
-      subtitle: "RaiseMed.IA Gold",
+      name: "RaiseMed.IA Gold",
       price: "1760",
       unit: "€/an",
       originalPrice: "2350€",
@@ -40,9 +34,9 @@ export default function Pricing() {
       setupFee: "Installation OFFERTE",
       commitment: "Engagement 12 mois",
       popular: true,
-      color: "bg-primary",
       buttonText: "CHOISIR CETTE OFFRE",
-      buttonColor: "bg-primary hover:bg-blue-700",
+      buttonColor: "bg-blue-600 hover:bg-blue-700",
+      stripeUrl: "https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k",
       badge: "POPULAIRE",
       bonuses: [
         "2 cartes NFC GRATUITES",
@@ -62,281 +56,165 @@ export default function Pricing() {
       ]
     },
     {
-      name: "",
-      subtitle: "Sur Devis",
-      price: "Sur",
-      priceSecondLine: "devis",
+      name: "Sur Devis",
+      price: "Sur devis",
       unit: "",
       setupFee: "Solution personnalisée",
       commitment: "Selon vos besoins",
       popular: false,
-      color: "bg-secondary",
       buttonText: "DEMANDER UN DEVIS",
-      buttonColor: "bg-secondary hover:bg-orange-600",
+      buttonColor: "bg-emerald-600 hover:bg-emerald-700",
+      whatsappUrl: "https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile",
       features: []
     }
   ];
 
   return (
-    <section id="pricing" className="bg-gray-50 py-20 relative overflow-hidden">
-      {/* Animated background elements */}
-      <motion.div
-        className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+    <section id="pricing" className="bg-gray-50 section-padding relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-emerald-600/5 rounded-full blur-3xl animate-float animation-delay-1000"></div>
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeIn" className="text-center mb-12">
-          <motion.h2 
-            className="text-3xl lg:text-4xl font-bold text-dark mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+        <div className="text-center mb-12 animate-fade-in-up">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 gradient-text">
             Choisissez votre solution
-          </motion.h2>
-          <motion.p 
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Des tarifs transparents pour faire évoluer votre business
-          </motion.p>
-        </ScrollAnimation>
+          </p>
+        </div>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
-            <HoverEffect key={index} effect="lift" className="relative">
-              <div className="bg-white rounded-xl border-2 border-gray-100 overflow-hidden h-full flex flex-col">
-                {/* Badge populaire */}
-                {plan.badge && (
-                  <motion.div 
-                    className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
-                    initial={{ scale: 0, y: -10 }}
-                    whileInView={{ scale: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 300, delay: index * 0.1 + 0.3 }}
-                  >
-                    <div className="bg-green-500 text-white px-4 py-1 rounded-full text-xs font-bold">
-                      {plan.badge}
-                    </div>
-                  </motion.div>
+            <div 
+              key={index} 
+              className={`relative bg-white rounded-xl border-2 ${plan.popular ? 'border-blue-500 shadow-2xl transform scale-105' : 'border-gray-100 shadow-lg'} overflow-hidden h-full flex flex-col card-hover animate-fade-in-up`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              {/* Badge populaire */}
+              {plan.badge && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="bg-blue-500 text-white px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                    <Star className="inline h-3 w-3 mr-1" />
+                    {plan.badge}
+                  </div>
+                </div>
+              )}
+
+              {/* Header avec nom du plan */}
+              <div className="text-center pt-8 pb-4 px-6">
+                <div className="text-gray-700 font-semibold text-lg">
+                  {plan.name}
+                </div>
+              </div>
+
+              {/* Prix */}
+              <div className="text-center mb-6 px-6">
+                <div className="flex items-end justify-center space-x-1">
+                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                  {plan.unit && <span className="text-gray-600 text-sm mb-2">{plan.unit}</span>}
+                </div>
+                
+                {plan.originalPrice && (
+                  <div className="text-center mt-2">
+                    <div className="text-gray-500 line-through text-sm">{plan.originalPrice}</div>
+                    <div className="text-emerald-600 font-semibold text-sm">{plan.savings}</div>
+                  </div>
                 )}
+                
+                <div className="text-gray-600 text-sm mt-2">{plan.setupFee}</div>
+                <div className="text-gray-500 text-xs">{plan.commitment}</div>
+              </div>
 
-                {/* Header avec nom du plan */}
-                <div className="text-center pt-8 pb-4 px-6">
-                  <motion.div 
-                    className="text-gray-700 font-semibold text-lg"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.1 }}
-                  >
-                    {plan.subtitle}
-                  </motion.div>
-                </div>
-
-                {/* Prix */}
-                <div className="text-center mb-6 px-6">
-                  <motion.div 
-                    className="flex items-end justify-center space-x-1"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ type: 'spring', stiffness: 300, delay: index * 0.1 + 0.2 }}
-                  >
-                    <span className="text-4xl font-bold text-dark">{plan.price}</span>
-                    {plan.priceSecondLine && (
-                      <div className="flex flex-col">
-                        <span className="text-4xl font-bold text-dark">{plan.priceSecondLine}</span>
-                      </div>
-                    )}
-                    {plan.unit && <span className="text-gray-600 text-sm mb-2">{plan.unit}</span>}
-                  </motion.div>
-                  
-                  {plan.originalPrice && (
-                    <motion.div 
-                      className="text-center mt-2"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-                    >
-                      <div className="text-gray-500 line-through text-sm">Au lieu de {plan.originalPrice}</div>
-                      <div className="text-green-600 font-semibold text-sm">{plan.savings}</div>
-                    </motion.div>
-                  )}
-                  
-                  <motion.div 
-                    className="text-xs text-gray-600 mt-2"
-                    initial={{ opacity: 0, y: 5 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
-                  >
-                    {plan.setupFee}
-                  </motion.div>
-                  <motion.div 
-                    className="text-xs text-gray-500"
-                    initial={{ opacity: 0, y: 5 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
-                  >
-                    {plan.commitment}
-                  </motion.div>
-                </div>
-
-                {/* Bouton d'action */}
-                <div className="px-6 mb-6">
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.6 }}
-                  >
-                    {plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMed.IA Pro" ? (
-                      <Button 
-                        asChild 
-                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
-                      >
-                        <a href="https://buy.stripe.com/dR67urecxcHLdLW00g" target="_blank" rel="noopener noreferrer">
-                          {plan.buttonText}
-                        </a>
-                      </Button>
-                    ) : plan.buttonText === "CHOISIR CETTE OFFRE" && plan.subtitle === "RaiseMed.IA Gold" ? (
-                      <Button 
-                        asChild 
-                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
-                      >
-                        <a href="https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k" target="_blank" rel="noopener noreferrer">
-                          {plan.buttonText}
-                        </a>
-                      </Button>
-                    ) : plan.buttonText === "DEMANDER UN DEVIS" ? (
-                      <Button 
-                        asChild 
-                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
-                      >
-                        <a href="https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile" target="_blank" rel="noopener noreferrer">
-                          {plan.buttonText}
-                        </a>
-                      </Button>
-                    ) : (
-                      <Button 
-                        asChild 
-                        className={`w-full ${plan.buttonColor} text-white py-3 text-sm font-bold tracking-wide transition-all duration-300`}
-                      >
-                        <a href="https://buy.stripe.com/14AcN78cb1Fq2Wb0o0fMA0k" target="_blank" rel="noopener noreferrer">
-                          {plan.buttonText}
-                        </a>
-                      </Button>
-                    )}
-                  </motion.div>
-                </div>
-
-                {/* Bonus */}
-                {plan.bonuses && (
-                  <motion.div 
-                    className="px-6 mb-4"
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 + 0.7 }}
-                  >
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-3 border border-green-200">
-                      <div className="flex items-center mb-2">
-                        <Gift className="w-4 h-4 text-green-600 mr-2" />
-                        <span className="font-semibold text-sm text-green-800">Bonus inclus :</span>
-                      </div>
+              {/* Bonus pour Gold */}
+              {plan.bonuses && (
+                <div className="px-6 mb-4">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-center mb-2">
+                      <Gift className="h-4 w-4 text-blue-600 mr-2" />
+                      <span className="text-blue-700 font-semibold text-sm">Bonus inclus :</span>
+                    </div>
+                    <ul className="text-xs text-blue-600 space-y-1">
                       {plan.bonuses.map((bonus, bonusIndex) => (
-                        <motion.div 
-                          key={bonusIndex}
-                          className="flex items-center text-xs text-green-700 mb-1"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: index * 0.1 + 0.8 + bonusIndex * 0.1 }}
-                        >
-                          <Check className="w-3 h-3 text-green-600 mr-2" />
+                        <li key={bonusIndex} className="flex items-center">
+                          <Check className="h-3 w-3 mr-2 text-blue-600" />
                           {bonus}
-                        </motion.div>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Liste des fonctionnalités */}
-                {plan.features.length > 0 && (
-                  <div className="px-6 pb-6 flex-grow">
-                    <motion.div 
-                      className="text-center mb-3"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.8 }}
-                    >
-                      <span className="text-xs text-gray-500">Tout inclus :</span>
-                    </motion.div>
-                    <ul className="space-y-2">
-                      {plan.features.map((feature, featureIndex) => (
-                        <motion.li 
-                          key={featureIndex}
-                          className="flex items-start text-sm text-gray-600"
-                          initial={{ opacity: 0, x: -10 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: index * 0.1 + 0.9 + featureIndex * 0.05 }}
-                        >
-                          <Check className="w-4 h-4 text-gray-400 mr-3 flex-shrink-0 mt-0.5" />
-                          <span className="leading-tight">{feature}</span>
-                        </motion.li>
+                        </li>
                       ))}
                     </ul>
                   </div>
+                </div>
+              )}
+
+              {/* Features */}
+              <div className="px-6 flex-grow">
+                <ul className="space-y-3">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start text-sm">
+                      <Check className="h-4 w-4 text-emerald-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Button */}
+              <div className="p-6 mt-auto">
+                {plan.stripeUrl ? (
+                  <a 
+                    href={plan.stripeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
+                  >
+                    <Button className={`w-full py-3 text-sm font-semibold ${plan.buttonColor} text-white transition-all duration-300`}>
+                      {plan.buttonText}
+                    </Button>
+                  </a>
+                ) : plan.whatsappUrl ? (
+                  <a 
+                    href={plan.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
+                  >
+                    <Button className={`w-full py-3 text-sm font-semibold ${plan.buttonColor} text-white transition-all duration-300`}>
+                      {plan.buttonText}
+                    </Button>
+                  </a>
+                ) : (
+                  <Button className={`w-full py-3 text-sm font-semibold ${plan.buttonColor} text-white transition-all duration-300`}>
+                    {plan.buttonText}
+                  </Button>
                 )}
               </div>
-            </HoverEffect>
-          ))}
-        </StaggerContainer>
-
-        {/* Section informations complémentaires */}
-        <ScrollAnimation animation="slideUp" delay={0.8} className="text-center mt-12">
-          <motion.div 
-            className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="flex items-center justify-center mb-4">
-              <Phone className="w-5 h-5 text-primary mr-2" />
-              <span className="font-semibold text-dark">Besoin d'aide pour choisir ?</span>
             </div>
-            <p className="text-gray-600 text-sm mb-4">
-              Nos experts vous accompagnent gratuitement dans le choix de la solution la plus adaptée à vos besoins.
-            </p>
-            <Button 
-              asChild 
-              className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 text-sm font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <a href="https://wa.me/33782492124?text=Bonjour%2CJe%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20de%20gestion%20et%20optimisation%20de%20page%20Google%20Business%20Profile" target="_blank" rel="noopener noreferrer">
-                Demander un conseil gratuit
-              </a>
-            </Button>
-          </motion.div>
-        </ScrollAnimation>
+          ))}
+        </div>
+
+        {/* Section info supplémentaire */}
+        <div className="mt-12 text-center animate-fade-in-up animation-delay-700">
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-3xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Pourquoi choisir RaiseMed.IA ?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="p-4">
+                <div className="text-3xl font-bold text-blue-600 mb-2">+500k€</div>
+                <p className="text-gray-600 text-sm">Générés pour nos clients</p>
+              </div>
+              <div className="p-4">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">↓60%</div>
+                <p className="text-gray-600 text-sm">Réduction coût par lead</p>
+              </div>
+              <div className="p-4">
+                <div className="text-3xl font-bold text-yellow-600 mb-2">4</div>
+                <p className="text-gray-600 text-sm">Pays desservis</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
