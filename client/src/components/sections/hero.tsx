@@ -129,7 +129,7 @@ export default function Hero() {
                   <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-glow p-4 animate-float delay-500">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-semibold text-slate-700">Leads en temps réel</span>
+                      <span className="text-sm font-semibold text-slate-700">Entreprises Partenaires</span>
                     </div>
                     <p className="text-2xl font-bold text-green-600 mt-1">+50</p>
                   </div>
