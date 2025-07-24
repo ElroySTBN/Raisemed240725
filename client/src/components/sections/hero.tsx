@@ -73,7 +73,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-2xl font-bold text-slate-900">-60%</p>
-                    <p className="text-sm text-slate-600">clients satisfaits</p>
+                    <p className="text-sm text-slate-600">coût par lead</p>
                   </div>
                 </div>
               </div>
