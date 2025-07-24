@@ -246,10 +246,6 @@ export default function Pricing() {
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
               <span>Résiliation à tout moment</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-              <span>ROI garanti dès le 1er mois</span>
-            </div>
           </div>
         </div>
       </div>
