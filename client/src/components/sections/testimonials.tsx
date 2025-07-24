@@ -27,16 +27,16 @@ export default function Testimonials() {
 
   return (
     <section className="bg-white section-padding relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-blue-600/20 rounded-full blur-2xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-blue-600/20 to-emerald-500/20 rounded-full blur-2xl animate-float animation-delay-1000"></div>
+      {/* Background subtil style Beyonds */}
+      <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-gray-50 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-1/4 left-1/4 w-24 h-24 bg-gray-100 rounded-full blur-3xl animate-float animation-delay-1000"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 gradient-text">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary-beyonds mb-6">
             Ce que disent nos clients
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-secondary-beyonds">
             Leur succès parle pour nous
           </p>
         </div>
@@ -45,18 +45,18 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg card-hover animate-fade-in-up`}
+              className={`bg-white rounded-lg p-8 border border-gray-100 shadow-beyonds hover-lift animate-fade-in-up`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400 mb-2">
+                <div className="flex text-amber-400 mb-2">
                   {[...Array(testimonial.stars)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-current" />
+                    <Star key={i} className="h-4 w-4 fill-current" />
                   ))}
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+              <p className="text-secondary-beyonds mb-6 leading-relaxed text-lg">
                 "{testimonial.text}"
               </p>
               
@@ -67,8 +67,8 @@ export default function Testimonials() {
                   className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-gray-100"
                 />
                 <div>
-                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  <p className="font-semibold text-primary-beyonds">{testimonial.author}</p>
+                  <p className="text-muted-beyonds text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>
