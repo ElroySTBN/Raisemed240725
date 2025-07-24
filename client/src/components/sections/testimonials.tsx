@@ -1,116 +1,78 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Beyonds, bien plus qu'une agence inbound marketing",
-      content: "L'équipe RaiseMed.IA a transformé notre approche d'acquisition client. En 6 mois, nous avons triplé nos rendez-vous qualifiés.",
-      author: "Dr. Sarah L.",
+      stars: 5,
+      text: "Grâce à RaiseMed.IA, notre cabinet est maintenant le premier résultat sur Google. Nos rendez-vous sont complets 3 semaines à l'avance !",
+      author: "Dr. S.L.",
       role: "Chirurgien-dentiste",
-      logo: "CNews"
+      avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
     },
     {
-      quote: "L'ascension de RaiseMed.IA parmi les agences marketing à Paris", 
-      content: "Une approche inbound marketing révolutionnaire qui a permis à notre agence de doubler son chiffre d'affaires en une année.",
-      author: "Marc D.",
-      role: "Directeur d'agence immobilière",
-      logo: "BFM Business"
+      stars: 5,
+      text: "En 6 mois, nous avons doublé notre chiffre d'affaires. L'inbound marketing a complètement transformé notre approche commerciale.",
+      author: "M.D.",
+      role: "Plombier-chauffagiste",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
     },
     {
-      quote: "RaiseMed.IA, une agence à la conquête du marketing local",
-      content: "Enfin une agence qui comprend les enjeux du commerce de proximité. Nos leads sont maintenant 100% qualifiés.",
-      author: "Anne R.",
-      role: "Propriétaire pharmacie",
-      logo: "Le Point"
+      stars: 5,
+      text: "L'équipe RaiseMed.IA comprend vraiment les enjeux de l'immobilier local. Nos vendeurs ont maintenant des leads qualifiés tous les jours.",
+      author: "A.R.",
+      role: "Directrice agence immobilière",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616c989e08bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
     }
   ];
 
   return (
-    <section className="section-spacing bg-white">
-      <div className="container-beyonds">
-        {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-8 leading-tight">
-            La revue de <span className="text-gradient-beyonds">presse</span>
+    <section className="bg-white section-padding relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-blue-600/20 rounded-full blur-2xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-blue-600/20 to-emerald-500/20 rounded-full blur-2xl animate-float animation-delay-1000"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 gradient-text">
+            Ce que disent nos clients
           </h2>
+          <p className="text-xl text-gray-600">
+            Leur succès parle pour nous
+          </p>
         </div>
 
-        {/* Navigation Arrows */}
-        <div className="flex justify-between items-center mb-8">
-          <div className="animate-slide-left">
-            <h3 className="text-2xl font-semibold text-black">Ce qu'ils disent de nous</h3>
-          </div>
-          <div className="hidden md:flex space-x-4 animate-slide-right">
-            <button className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
-              <svg className="h-4 w-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            <button className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className={`animate-slide-up delay-${(index + 1) * 100}`}
+              className={`bg-gradient-to-br from-gray-50 to-white rounded-xl p-8 border border-gray-100 shadow-lg card-hover animate-fade-in-up`}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
-              {/* Logo/Media */}
-              <div className="mb-6">
-                <div className="h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                  <span className="text-sm font-semibold text-gray-600">
-                    {testimonial.logo}
-                  </span>
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400 mb-2">
+                  {[...Array(testimonial.stars)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 fill-current" />
+                  ))}
                 </div>
               </div>
-
-              {/* Quote Title */}
-              <h3 className="text-lg font-semibold text-black mb-4 leading-tight">
-                {testimonial.quote}
-              </h3>
-
-              {/* Content */}
-              <div className="space-y-4">
-                <p className="text-gray-600 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                
-                {/* Author */}
-                <div className="pt-4 border-t border-gray-100">
-                  <p className="font-medium text-black">{testimonial.author}</p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+              
+              <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                "{testimonial.text}"
+              </p>
+              
+              <div className="flex items-center">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.author}
+                  className="w-12 h-12 rounded-full mr-4 object-cover border-2 border-gray-100"
+                />
+                <div>
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-slide-up delay-400">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-black mb-4">
-              Rejoignez nos <span className="text-gradient-beyonds">clients satisfaits</span>
-            </h3>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Découvrez comment notre approche inbound marketing peut transformer 
-              votre acquisition de clients et booster votre croissance.
-            </p>
-            
-            <a 
-              href="https://tally.so/r/wvbMdQ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-beyonds"
-            >
-              Demander une démonstration
-            </a>
-          </div>
         </div>
       </div>
     </section>

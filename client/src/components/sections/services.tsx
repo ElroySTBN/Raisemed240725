@@ -1,133 +1,68 @@
-import { Globe, ShoppingCart, RefreshCw, Wrench, Server, Search, ArrowRight } from "lucide-react";
+import { Magnet, Shield, TrendingUp, Check } from "lucide-react";
 
 export default function Services() {
-  const mainServices = [
-    {
-      icon: Globe,
-      title: "Stratégie inbound marketing",
-      description: "Notre agence spécialisée dans l'inbound marketing développe des stratégies d'attraction client sur-mesure."
-    },
-    {
-      icon: ShoppingCart,
-      title: "Génération de leads qualifiés", 
-      description: "Nous créons des systèmes de capture de leads performants pour votre secteur d'activité."
-    },
-    {
-      icon: RefreshCw,
-      title: "Optimisation de conversion",
-      description: "Améliorez vos taux de conversion avec des parcours clients optimisés et une expérience utilisateur parfaite."
-    },
-    {
-      icon: Search,
-      title: "SEO et référencement local",
-      description: "Positionnez-vous en première page Google avec notre expertise en référencement naturel et local."
-    },
-    {
-      icon: Wrench,
-      title: "Marketing automation",
-      description: "Automatisez vos campagnes marketing et le nurturing de vos prospects avec des outils performants."
-    },
-    {
-      icon: Server,
-      title: "Analytics et reporting",
-      description: "Suivez vos performances en temps réel avec des tableaux de bord détaillés et des rapports personnalisés."
-    }
-  ];
-
   return (
-    <section id="services" className="section-spacing bg-gray-50">
-      <div className="container-beyonds">
-        {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-8 leading-tight">
-            Découvrez l'ensemble de nos <span className="text-gradient-beyonds">expertises</span>
+    <section id="services" className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-5">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-yellow-500 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 gradient-text">
+            Notre approche inbound marketing révolutionnaire
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Que votre objectif soit de générer des leads qualifiés, d'améliorer votre visibilité locale, 
-              d'optimiser vos conversions ou de développer votre stratégie digitale, nous sommes à vos côtés.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Nous vous proposons des solutions d'inbound marketing efficaces et pérennes qui répondent 
-              aux besoins spécifiques des entreprises locales.
-            </p>
-          </div>
-          
-          <div className="mt-8">
-            <a 
-              href="https://tally.so/r/wvbMdQ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-beyonds"
-            >
-              Nos expertises
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
+          <p className="text-2xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
+            Découvrez comment l'inbound marketing peut transformer votre entreprise locale en aimant à prospects qualifiés
+          </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="expertise-grid">
-          {mainServices.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <div 
-                key={index}
-                className={`card-beyonds animate-slide-up delay-${(index + 1) * 100}`}
-              >
-                <div className="flex items-center justify-center w-12 h-12 bg-black rounded-lg mb-6">
-                  <IconComponent className="h-6 w-6 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-semibold text-black mb-4 leading-tight">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mt-6">
-                  <a 
-                    href="https://tally.so/r/wvbMdQ" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-black font-medium hover:text-gray-600 transition-colors group"
-                  >
-                    En savoir plus
-                    <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-10 rounded-3xl shadow-2xl card-hover animate-fade-in-up">
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float">
+              <Magnet className="h-8 w-8" />
+            </div>
+            <h3 className="text-2xl font-bold mb-6">Attraction Intelligence</h3>
+            <p className="text-blue-100 mb-8 text-lg leading-relaxed">
+              Attirez naturellement vos prospects idéaux grâce à du contenu personnalisé et une optimisation SEO locale poussée.
+            </p>
+            <ul className="space-y-3 text-blue-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />SEO local optimisé</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />Contenu expert métier</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />Stratégie réseaux sociaux</li>
+            </ul>
+          </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-slide-up delay-700">
-          <div className="bg-white rounded-2xl shadow-beyonds-lg p-8 max-w-3xl mx-auto">
-            <h3 className="text-2xl font-bold text-black mb-4">
-              RaiseMed.IA, votre <span className="text-gradient-beyonds">agence inbound marketing</span> à Paris
-            </h3>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Créer une stratégie inbound marketing demande des compétences spécialisées, une maîtrise 
-              technique poussée, ainsi que l'accompagnement de professionnels chevronnés.
+          <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 text-white p-10 rounded-3xl shadow-2xl card-hover animate-fade-in-up animation-delay-200">
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float animation-delay-300">
+              <Shield className="h-8 w-8" />
+            </div>
+            <h3 className="text-2xl font-bold mb-6">E-réputation</h3>
+            <p className="text-emerald-100 mb-8 text-lg leading-relaxed">
+              Gérez et améliorez votre réputation en ligne pour renforcer la confiance et attirer plus de clients locaux.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Que votre projet concerne la génération de leads pour un cabinet médical ou le développement 
-              d'une stratégie digitale pour votre entreprise locale, notre <strong>agence d'inbound marketing</strong> est 
-              là pour vous guider à chaque étape.
+            <ul className="space-y-3 text-emerald-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />Gestion des avis clients</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />Monitoring de réputation</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-yellow-400" />Stratégie de réponse</li>
+            </ul>
+          </div>
+
+          <div className="bg-gradient-to-br from-yellow-500 to-orange-600 text-white p-10 rounded-3xl shadow-2xl card-hover animate-fade-in-up animation-delay-500">
+            <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-8 animate-float animation-delay-700">
+              <TrendingUp className="h-8 w-8" />
+            </div>
+            <h3 className="text-2xl font-bold mb-6">Résultats Data-Driven</h3>
+            <p className="text-orange-100 mb-8 text-lg leading-relaxed">
+              Chaque action est mesurée et optimisée grâce à nos rapports mensuels et veille concurrentielle continue.
             </p>
-            
-            <a 
-              href="https://tally.so/r/wvbMdQ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-beyonds"
-            >
-              Nos réalisations
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <ul className="space-y-3 text-orange-100">
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-white" />KPIs personnalisés</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-white" />ROI transparent</li>
+              <li className="flex items-center"><Check className="mr-3 h-5 w-5 text-white" />Veille concurrentielle</li>
+            </ul>
           </div>
         </div>
       </div>
