@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Sparkles, TrendingUp, Users, Zap } from "lucide-react";
 
+import Avatar_Raisemed_ia___Fond_blanc_3 from "@assets/Avatar Raisemed.ia - Fond blanc-3.png";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 overflow-hidden flex items-center">
@@ -119,7 +121,7 @@ export default function Hero() {
                 <div className="relative z-10 bg-white rounded-3xl shadow-premium p-8 card-premium">
                   <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl overflow-hidden">
                     <img 
-                      src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                      src={Avatar_Raisemed_ia___Fond_blanc_3} 
                       alt="Équipe marketing digitale travaillant sur des stratégies inbound" 
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
