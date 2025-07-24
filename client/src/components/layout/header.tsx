@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    // If we're not on the home page, navigate to home first
     if (window.location.pathname !== '/') {
       window.location.href = '/';
-      // Use a timeout to ensure page loads before scrolling
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -26,80 +33,95 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
+  const navigationItems = [
+    { label: 'Services', action: () => scrollToSection("services") },
+    { label: 'Tarification', action: () => scrollToSection("pricing") },
+    { label: 'Méthodologie', action: () => scrollToSection("methodologie") },
+    { label: 'Cas Clients', href: '/cas-clients' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', action: () => scrollToSection("contact") }
+  ];
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-lg shadow-premium border-b border-slate-200/50' 
+          : 'bg-transparent'
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <a 
-                href="/" 
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="flex items-center"
-              >
-                <img 
-                  src="/assets/raisemed-logo.png" 
-                  alt="RaiseMed.IA" 
-                  className="h-10 w-auto"
-                />
-              </a>
-            </div>
-            <div className="hidden md:block ml-10">
-              <div className="flex items-baseline space-x-8">
-                <button 
-                  onClick={() => scrollToSection("services")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Services
-                </button>
-                <button 
-                  onClick={() => scrollToSection("pricing")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Tarification
-                </button>
-                <button 
-                  onClick={() => scrollToSection("methodologie")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Méthodologie
-                </button>
-                <a 
-                  href="/cas-clients"
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Cas Clients
-                </a>
-                <a 
-                  href="/blog"
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Blog
-                </a>
-                <button 
-                  onClick={() => scrollToSection("contact")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Contact
-                </button>
+            <a 
+              href="/" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center space-x-3 group"
+            >
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center shadow-glow group-hover:shadow-lg transition-all duration-300">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 animate-pulse"></div>
               </div>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-primary text-white hover:bg-blue-700">
-                Audit Gratuit
-              </Button>
+              <div className="hidden sm:block">
+                <span className="text-2xl font-bold text-gradient">RaiseMed.IA</span>
+                <p className="text-xs text-slate-600 mt-1">Marketing Intelligence</p>
+              </div>
             </a>
           </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {navigationItems.map((item, index) => (
+              item.href ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 ${
+                    isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200 hover:bg-white/10'
+                  } animate-fade-in-up delay-${index * 100}`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={item.action}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 hover:bg-slate-100 ${
+                    isScrolled ? 'text-slate-700 hover:text-blue-600' : 'text-white hover:text-blue-200 hover:bg-white/10'
+                  } animate-fade-in-up delay-${index * 100}`}
+                >
+                  {item.label}
+                </button>
+              )
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href="https://tally.so/r/wvbMdQ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="animate-fade-in-up delay-700"
+            >
+              <button className="btn-premium focus-premium">
+                <span className="relative z-10">Audit Gratuit</span>
+              </button>
+            </a>
+          </div>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className={`hover:bg-slate-100 ${
+                isScrolled ? 'text-slate-700' : 'text-white hover:bg-white/10'
+              }`}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -108,43 +130,41 @@ export default function Header() {
         
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <button 
-                onClick={() => scrollToSection("services")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => scrollToSection("methodologie")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Méthodologie
-              </button>
-              <a 
-                href="/cas-clients"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Cas Clients
-              </a>
-              <a 
-                href="/blog"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Blog
-              </a>
-              <button 
-                onClick={() => scrollToSection("contact")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Contact
-              </button>
-              <div className="px-3 py-2">
-                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-primary text-white hover:bg-blue-700">
-                    Audit Gratuit
-                  </Button>
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg border-b border-slate-200/50 shadow-premium animate-fade-in-scale">
+            <div className="px-4 py-6 space-y-4">
+              {navigationItems.map((item, index) => (
+                item.href ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className={`block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <button
+                    key={item.label}
+                    onClick={item.action}
+                    className={`block w-full text-left px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-all duration-300 animate-slide-in-left delay-${index * 100}`}
+                  >
+                    {item.label}
+                  </button>
+                )
+              ))}
+              
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-slate-200">
+                <a 
+                  href="https://tally.so/r/wvbMdQ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block animate-slide-in-left delay-700"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <button className="btn-premium w-full">
+                    <span className="relative z-10">Audit Gratuit</span>
+                  </button>
                 </a>
               </div>
             </div>
