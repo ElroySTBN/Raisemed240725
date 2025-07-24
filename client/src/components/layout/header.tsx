@@ -1,156 +1,158 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Calendar, Menu, X } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
-    // If we're not on the home page, navigate to home first
-    if (window.location.pathname !== '/') {
-      window.location.href = '/';
-      // Use a timeout to ensure page loads before scrolling
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-      return;
-    }
-    
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="nav-beyonds">
+      <div className="container-beyonds">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <a 
-                href="/" 
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className="flex items-center"
-              >
-                <img 
-                  src="/assets/raisemed-logo.png" 
-                  alt="RaiseMed.IA" 
-                  className="h-10 w-auto"
-                />
-              </a>
-            </div>
-            <div className="hidden md:block ml-10">
-              <div className="flex items-baseline space-x-8">
-                <button 
-                  onClick={() => scrollToSection("services")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Services
-                </button>
-                <button 
-                  onClick={() => scrollToSection("pricing")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Tarification
-                </button>
-                <button 
-                  onClick={() => scrollToSection("methodologie")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Méthodologie
-                </button>
-                <a 
-                  href="/cas-clients"
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Cas Clients
-                </a>
-                <a 
-                  href="/blog"
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Blog
-                </a>
-                <button 
-                  onClick={() => scrollToSection("contact")}
-                  className="text-gray-700 hover:text-primary transition-colors"
-                >
-                  Contact
-                </button>
-              </div>
-            </div>
+            <img 
+              src="/assets/raisemed-logo.png" 
+              alt="RaiseMed.IA" 
+              className="h-8 w-auto"
+            />
           </div>
-          <div className="hidden md:block">
-            <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-primary text-white hover:bg-blue-700">
-                Audit Gratuit
-              </Button>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <button 
+              onClick={() => scrollToSection('services')}
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Nos expertises
+            </button>
+            <button 
+              onClick={() => scrollToSection('methodologie')}
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Méthodologie
+            </button>
+            <button 
+              onClick={() => scrollToSection('cas-clients')}
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Projets
+            </button>
+            <button 
+              onClick={() => scrollToSection('pricing')}
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Tarifs
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
+              Contact
+            </button>
+          </nav>
+
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a 
+              href="https://tally.so/r/wvbMdQ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-beyonds-outline"
+            >
+              Nous contacter
+            </a>
+            <a 
+              href="https://tally.so/r/wvbMdQ" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-beyonds"
+            >
+              <Calendar className="h-4 w-4" />
+              Prendre RDV
             </a>
           </div>
+
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
         </div>
-        
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+      </div>
+
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="container-beyonds py-4">
+            <nav className="flex flex-col space-y-4">
               <button 
-                onClick={() => scrollToSection("services")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
+                onClick={() => scrollToSection('services')}
+                className="text-left text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors py-2"
               >
-                Services
+                Nos expertises
               </button>
               <button 
-                onClick={() => scrollToSection("methodologie")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
+                onClick={() => scrollToSection('methodologie')}
+                className="text-left text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors py-2"
               >
                 Méthodologie
               </button>
-              <a 
-                href="/cas-clients"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Cas Clients
-              </a>
-              <a 
-                href="/blog"
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
-              >
-                Blog
-              </a>
               <button 
-                onClick={() => scrollToSection("contact")}
-                className="block px-3 py-2 text-gray-700 hover:text-primary transition-colors w-full text-left"
+                onClick={() => scrollToSection('cas-clients')}
+                className="text-left text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors py-2"
+              >
+                Projets
+              </button>
+              <button 
+                onClick={() => scrollToSection('pricing')}
+                className="text-left text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors py-2"
+              >
+                Tarifs
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="text-left text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors py-2"
               >
                 Contact
               </button>
-              <div className="px-3 py-2">
-                <a href="https://tally.so/r/wvbMdQ" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-primary text-white hover:bg-blue-700">
-                    Audit Gratuit
-                  </Button>
+              <div className="pt-4 space-y-3">
+                <a 
+                  href="https://tally.so/r/wvbMdQ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-beyonds-outline w-full justify-center"
+                >
+                  Nous contacter
+                </a>
+                <a 
+                  href="https://tally.so/r/wvbMdQ" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-beyonds w-full justify-center"
+                >
+                  <Calendar className="h-4 w-4" />
+                  Prendre RDV
                 </a>
               </div>
-            </div>
+            </nav>
           </div>
-        )}
-      </nav>
+        </div>
+      )}
     </header>
   );
 }
