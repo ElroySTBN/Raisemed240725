@@ -10,7 +10,6 @@ export default function Hero() {
         <div className="absolute top-40 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-700"></div>
         <div className="absolute -bottom-8 left-40 w-80 h-80 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-300"></div>
       </div>
-
       {/* Geometric patterns */}
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +21,6 @@ export default function Hero() {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
       </div>
-
       <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -133,7 +131,7 @@ export default function Hero() {
                       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                       <span className="text-sm font-semibold text-slate-700">Leads en temps réel</span>
                     </div>
-                    <p className="text-2xl font-bold text-green-600 mt-1">+24%</p>
+                    <p className="text-2xl font-bold text-green-600 mt-1">+50</p>
                   </div>
 
                   <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-glow p-4 animate-float delay-1000">
@@ -153,7 +151,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
       {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 120" className="w-full h-auto">
