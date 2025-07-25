@@ -73,13 +73,17 @@ export default function BlogPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+            <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-700"></div>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                Blog Expert
+              <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-slate-900">
+                Blog <span className="text-gradient">Expert</span>
               </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Stratégies, conseils et insights pour transformer votre marketing digital
               </p>
             </div>
@@ -91,7 +95,7 @@ export default function BlogPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <article key={post.id} className="bg-white rounded-xl shadow-premium overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2 card-hover animate-fade-in-up">
                   <div className="relative">
                     <img 
                       src={post.image}
@@ -99,39 +103,41 @@ export default function BlogPage() {
                       className="w-full h-48 object-cover"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
                         {post.category}
                       </span>
                     </div>
                   </div>
                   
                   <div className="p-6">
-                    <div className="flex items-center text-gray-500 text-sm mb-3">
+                    <div className="flex items-center text-slate-500 text-sm mb-3">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>{post.date}</span>
                       <Clock className="w-4 h-4 ml-4 mr-2" />
                       <span>{post.readTime}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold text-dark mb-3 line-clamp-2">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 hover:text-blue-600 transition-colors duration-300">
                       {post.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 line-clamp-3">
+                    <p className="text-slate-600 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-gray-500 text-sm">
+                      <div className="flex items-center text-slate-500 text-sm">
                         <User className="w-4 h-4 mr-2" />
                         <span>{post.author}</span>
                       </div>
                       
                       <Link href={`/blog/${post.id}`}>
-                        <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white">
-                          Lire l'article
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Button>
+                        <button className="btn-premium text-sm group">
+                          <span className="relative z-10 flex items-center">
+                            Lire l'article
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                          </span>
+                        </button>
                       </Link>
                     </div>
                   </div>
@@ -142,8 +148,12 @@ export default function BlogPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float"></div>
+            <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl animate-float delay-1000"></div>
+          </div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Prêt à transformer votre marketing ?
             </h2>
@@ -151,11 +161,15 @@ export default function BlogPage() {
               Obtenez un audit gratuit de votre stratégie actuelle
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/#contact">
-                <Button className="bg-accent text-white px-8 py-4 text-lg hover:bg-yellow-600">
-                  Obtenir un audit gratuit
-                </Button>
-              </Link>
+              <a 
+                href="https://api.whatsapp.com/send/?phone=33782492124&text=Bonjour%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27un%20de%20vos%20services.%20Pourrais-je%20avoir%20plus%20d%27informations%20s%27il%20vous%20pla%C3%AEt%20%3F&type=phone_number&app_absent=0" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <button className="btn-premium bg-white text-blue-600 hover:bg-blue-50 border border-white/20">
+                  <span className="relative z-10">Obtenir un audit gratuit</span>
+                </button>
+              </a>
             </div>
           </div>
         </section>

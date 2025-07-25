@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-blue-800 text-white py-20 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 py-20 relative overflow-hidden">
           {/* Animated background elements */}
           <motion.div
             className="absolute top-10 right-10 w-32 h-32 bg-white/5 rounded-full blur-2xl"
@@ -45,15 +45,15 @@ export default function CaseStudiesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.h1 
-                className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
+                className="text-4xl lg:text-6xl font-bold mb-6 text-slate-900"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                Nos Cas Clients
+                Nos <span className="text-gradient">Cas Clients</span>
               </motion.h1>
               <motion.p 
-                className="text-xl text-blue-100 max-w-3xl mx-auto"
+                className="text-xl text-slate-600 max-w-3xl mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
